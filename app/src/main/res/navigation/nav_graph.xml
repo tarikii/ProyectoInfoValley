@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/acceso">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.projectinfovalley.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_acceso"
+            app:destination="@id/acceso" />
+    </fragment>
+    <fragment
+        android:id="@+id/acceso"
+        android:name="com.example.projectinfovalley.Acceso"
+        android:label="fragment_acceso"
+        tools:layout="@layout/fragment_acceso" >
+        <action
+            android:id="@+id/action_acceso_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_acceso_to_signup"
+            app:destination="@id/signup" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.projectinfovalley.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_menuGeneral"
+            app:destination="@id/menuGeneral" />
+    </fragment>
+    <fragment
+        android:id="@+id/signup"
+        android:name="com.example.projectinfovalley.Signup"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signup_to_menuGeneral"
+            app:destination="@id/menuGeneral" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuGeneral"
+        android:name="com.example.projectinfovalley.MenuGeneral"
+        android:label="fragment_menu_general"
+        tools:layout="@layout/fragment_menu_general" >
+        <action
+            android:id="@+id/action_menuGeneral_to_opcionesGenerales"
+            app:destination="@id/opcionesGenerales" />
+        <action
+            android:id="@+id/action_menuGeneral_to_menuJugador"
+            app:destination="@id/menuJugador" />
+        <action
+            android:id="@+id/action_menuGeneral_to_opcionesOnline"
+            app:destination="@id/opcionesOnline" />
+        <action
+            android:id="@+id/action_menuGeneral_to_foroQA"
+            app:destination="@id/foroQA" />
+    </fragment>
+    <fragment
+        android:id="@+id/opcionesGenerales"
+        android:name="com.example.projectinfovalley.OpcionesGenerales"
+        android:label="fragment_opciones_generales"
+        tools:layout="@layout/fragment_opciones_generales" >
+        <action
+            android:id="@+id/action_opcionesGenerales_to_opcionesGuiaInicio2"
+            app:destination="@id/opcionesGuiaInicio" />
+        <action
+            android:id="@+id/action_opcionesGenerales_to_opcionesHerramientas2"
+            app:destination="@id/opcionesHerramientas" />
+        <action
+            android:id="@+id/action_opcionesGenerales_to_opcionesArmas"
+            app:destination="@id/opcionesArmas" />
+        <action
+            android:id="@+id/action_opcionesGenerales_to_opcionesFabricacion"
+            app:destination="@id/opcionesFabricacion" />
+        <action
+            android:id="@+id/action_opcionesGenerales_to_opcionesRecoleccion"
+            app:destination="@id/opcionesRecoleccion" />
+        <action
+            android:id="@+id/action_opcionesGenerales_to_opcionesAnimales"
+            app:destination="@id/opcionesAnimales" />
+    </fragment>
+    <fragment
+        android:id="@+id/opcionesGuiaInicio"
+        android:name="com.example.projectinfovalley.OpcionesGuiaInicio"
+        android:label="fragment_opciones_guia_inicio"
+        tools:layout="@layout/fragment_opciones_guia_inicio" >
+        <action
+            android:id="@+id/action_opcionesGuiaInicio_to_granjaEstandar"
+            app:destination="@id/granjaEstandar" />
+        <action
+            android:id="@+id/action_opcionesGuiaInicio_to_granjaFluvial"
+            app:destination="@id/granjaFluvial" />
+        <action
+            android:id="@+id/action_opcionesGuiaInicio_to_granjaMinera"
+            app:destination="@id/granjaMinera" />
+        <action
+            android:id="@+id/action_opcionesGuiaInicio_to_granjaPlaya"
+            app:destination="@id/granjaPlaya" />
+        <action
+            android:id="@+id/action_opcionesGuiaInicio_to_controles"
+            app:destination="@id/controles" />
+        <action
+            android:id="@+id/action_opcionesGuiaInicio_to_primeraCosecha"
+            app:destination="@id/primeraCosecha" />
+        <action
+            android:id="@+id/action_opcionesGuiaInicio_to_energia"
+            app:destination="@id/energia" />
+        <action
+            android:id="@+id/action_opcionesGuiaInicio_to_habilidades"
+            app:destination="@id/habilidades" />
+        <action
+            android:id="@+id/action_opcionesGuiaInicio_to_aldeanosAmistades"
+            app:destination="@id/aldeanosAmistades" />
+        <action
+            android:id="@+id/action_opcionesGuiaInicio_to_television"
+            app:destination="@id/television" />
+    </fragment>
+    <fragment
+        android:id="@+id/opcionesHerramientas"
+        android:name="com.example.projectinfovalley.OpcionesHerramientas"
+        android:label="fragment_opciones_herramientas"
+        tools:layout="@layout/fragment_opciones_herramientas" >
+        <action
+            android:id="@+id/action_opcionesHerramientas_to_herramientas"
+            app:destination="@id/herramientas" />
+        <action
+            android:id="@+id/action_opcionesHerramientas_to_encantamientos"
+            app:destination="@id/encantamientos" />
+        <action
+            android:id="@+id/action_opcionesHerramientas_to_azadas"
+            app:destination="@id/azadas" />
+        <action
+            android:id="@+id/action_opcionesHerramientas_to_picos"
+            app:destination="@id/picos" />
+        <action
+            android:id="@+id/action_opcionesHerramientas_to_hachas"
+            app:destination="@id/hachas" />
+        <action
+            android:id="@+id/action_opcionesHerramientas_to_regaderas"
+            app:destination="@id/regaderas" />
+        <action
+            android:id="@+id/action_opcionesHerramientas_to_canaPescar"
+            app:destination="@id/canaPescar" />
+    </fragment>
+    <fragment
+        android:id="@+id/opcionesArmas"
+        android:name="com.example.projectinfovalley.OpcionesArmas"
+        android:label="fragment_opciones_armas"
+        tools:layout="@layout/fragment_opciones_armas" />
+    <fragment
+        android:id="@+id/opcionesFabricacion"
+        android:name="com.example.projectinfovalley.OpcionesFabricacion"
+        android:label="fragment_opciones_fabricacion"
+        tools:layout="@layout/fragment_opciones_fabricacion" />
+    <fragment
+        android:id="@+id/opcionesRecoleccion"
+        android:name="com.example.projectinfovalley.OpcionesRecoleccion"
+        android:label="fragment_opciones_recoleccion"
+        tools:layout="@layout/fragment_opciones_recoleccion" />
+    <fragment
+        android:id="@+id/opcionesAnimales"
+        android:name="com.example.projectinfovalley.OpcionesAnimales"
+        android:label="fragment_opciones_animales"
+        tools:layout="@layout/fragment_opciones_animales" />
+    <fragment
+        android:id="@+id/tiposGranja"
+        android:name="com.example.projectinfovalley.TiposGranja"
+        android:label="fragment_tipos_granja"
+        tools:layout="@layout/fragment_tipos_granja" />
+    <fragment
+        android:id="@+id/granjaEstandar"
+        android:name="com.example.projectinfovalley.GranjaEstandar"
+        android:label="fragment_granja_estandar"
+        tools:layout="@layout/fragment_granja_estandar" />
+    <fragment
+        android:id="@+id/granjaFluvial"
+        android:name="com.example.projectinfovalley.GranjaFluvial"
+        android:label="fragment_granja_fluvial"
+        tools:layout="@layout/fragment_granja_fluvial" />
+    <fragment
+        android:id="@+id/granjaMinera"
+        android:name="com.example.projectinfovalley.GranjaMinera"
+        android:label="fragment_granja_minera"
+        tools:layout="@layout/fragment_granja_minera" />
+    <fragment
+        android:id="@+id/granjaPlaya"
+        android:name="com.example.projectinfovalley.GranjaPlaya"
+        android:label="fragment_granja_playa"
+        tools:layout="@layout/fragment_granja_playa" />
+    <fragment
+        android:id="@+id/controles"
+        android:name="com.example.projectinfovalley.Controles"
+        android:label="fragment_controles"
+        tools:layout="@layout/fragment_controles" />
+    <fragment
+        android:id="@+id/primeraCosecha"
+        android:name="com.example.projectinfovalley.PrimeraCosecha"
+        android:label="fragment_primera_cosecha"
+        tools:layout="@layout/fragment_primera_cosecha" />
+    <fragment
+        android:id="@+id/energia"
+        android:name="com.example.projectinfovalley.Energia"
+        android:label="fragment_energia"
+        tools:layout="@layout/fragment_energia" />
+    <fragment
+        android:id="@+id/habilidades"
+        android:name="com.example.projectinfovalley.Habilidades"
+        android:label="fragment_habilidades"
+        tools:layout="@layout/fragment_habilidades" />
+    <fragment
+        android:id="@+id/aldeanosAmistades"
+        android:name="com.example.projectinfovalley.AldeanosAmistades"
+        android:label="fragment_aldeanos_amistades"
+        tools:layout="@layout/fragment_aldeanos_amistades" />
+    <fragment
+        android:id="@+id/television"
+        android:name="com.example.projectinfovalley.Television"
+        android:label="fragment_television"
+        tools:layout="@layout/fragment_television" />
+    <fragment
+        android:id="@+id/herramientas"
+        android:name="com.example.projectinfovalley.Herramientas"
+        android:label="fragment_herramientas"
+        tools:layout="@layout/fragment_herramientas" />
+    <fragment
+        android:id="@+id/encantamientos"
+        android:name="com.example.projectinfovalley.Encantamientos"
+        android:label="fragment_encantamientos"
+        tools:layout="@layout/fragment_encantamientos" />
+    <fragment
+        android:id="@+id/azadas"
+        android:name="com.example.projectinfovalley.Azadas"
+        android:label="fragment_azadas"
+        tools:layout="@layout/fragment_azadas" />
+    <fragment
+        android:id="@+id/picos"
+        android:name="com.example.projectinfovalley.Picos"
+        android:label="fragment_picos"
+        tools:layout="@layout/fragment_picos" />
+    <fragment
+        android:id="@+id/hachas"
+        android:name="com.example.projectinfovalley.Hachas"
+        android:label="fragment_hachas"
+        tools:layout="@layout/fragment_hachas" />
+    <fragment
+        android:id="@+id/regaderas"
+        android:name="com.example.projectinfovalley.Regaderas"
+        android:label="fragment_regaderas"
+        tools:layout="@layout/fragment_regaderas" />
+    <fragment
+        android:id="@+id/canaPescar"
+        android:name="com.example.projectinfovalley.CanaPescar"
+        android:label="fragment_cana_pescar"
+        tools:layout="@layout/fragment_cana_pescar" />
+    <fragment
+        android:id="@+id/menuJugador"
+        android:name="com.example.projectinfovalley.MenuJugador"
+        android:label="fragment_menu_jugador"
+        tools:layout="@layout/fragment_menu_jugador" >
+        <action
+            android:id="@+id/action_menuJugador_to_amigos"
+            app:destination="@id/amigos" />
+        <action
+            android:id="@+id/action_menuJugador_to_inventario"
+            app:destination="@id/inventario" />
+        <action
+            android:id="@+id/action_menuJugador_to_logros"
+            app:destination="@id/logros" />
+    </fragment>
+    <fragment
+        android:id="@+id/amigos"
+        android:name="com.example.projectinfovalley.Amigos"
+        android:label="fragment_amigos"
+        tools:layout="@layout/fragment_amigos" />
+    <fragment
+        android:id="@+id/inventario"
+        android:name="com.example.projectinfovalley.Inventario"
+        android:label="fragment_inventario"
+        tools:layout="@layout/fragment_inventario" />
+    <fragment
+        android:id="@+id/logros"
+        android:name="com.example.projectinfovalley.Logros"
+        android:label="fragment_logros"
+        tools:layout="@layout/fragment_logros" />
+    <fragment
+        android:id="@+id/opcionesOnline"
+        android:name="com.example.projectinfovalley.OpcionesOnline"
+        android:label="fragment_opciones_online"
+        tools:layout="@layout/fragment_opciones_online" >
+        <action
+            android:id="@+id/action_opcionesOnline_to_vender"
+            app:destination="@id/vender" />
+        <action
+            android:id="@+id/action_opcionesOnline_to_comprar"
+            app:destination="@id/comprar" />
+    </fragment>
+    <fragment
+        android:id="@+id/vender"
+        android:name="com.example.projectinfovalley.Vender"
+        android:label="fragment_vender"
+        tools:layout="@layout/fragment_vender" >
+        <action
+            android:id="@+id/action_vender_to_semillasFresa"
+            app:destination="@id/semillasFresa" />
+        <action
+            android:id="@+id/action_vender_to_semillasChiviria"
+            app:destination="@id/semillasChiviria" />
+        <action
+            android:id="@+id/action_vender_to_tridenteRoto"
+            app:destination="@id/tridenteRoto" />
+        <action
+            android:id="@+id/action_vender_to_granoCafe"
+            app:destination="@id/granoCafe" />
+        <action
+            android:id="@+id/action_vender_to_semillaCarambola"
+            app:destination="@id/semillaCarambola" />
+        <action
+            android:id="@+id/action_vender_to_tijerasEsquilar"
+            app:destination="@id/tijerasEsquilar" />
+        <action
+            android:id="@+id/action_vender_to_cuboBasuraOro"
+            app:destination="@id/cuboBasuraOro" />
+        <action
+            android:id="@+id/action_vender_to_lucio"
+            app:destination="@id/lucio" />
+        <action
+            android:id="@+id/action_vender_to_gujaNeptuno"
+            app:destination="@id/gujaNeptuno" />
+    </fragment>
+    <fragment
+        android:id="@+id/semillasFresa"
+        android:name="com.example.projectinfovalley.SemillasFresa"
+        android:label="fragment_semillas_fresa"
+        tools:layout="@layout/fragment_semillas_fresa" >
+        <action
+            android:id="@+id/action_semillasFresa_to_puestoMercado"
+            app:destination="@id/puestoMercado" />
+    </fragment>
+    <fragment
+        android:id="@+id/semillasChiviria"
+        android:name="com.example.projectinfovalley.SemillasChiviria"
+        android:label="fragment_semillas_chiviria"
+        tools:layout="@layout/fragment_semillas_chiviria" />
+    <fragment
+        android:id="@+id/puestoMercado"
+        android:name="com.example.projectinfovalley.PuestoMercado"
+        android:label="fragment_puesto_mercado"
+        tools:layout="@layout/fragment_puesto_mercado" />
+    <fragment
+        android:id="@+id/tridenteRoto"
+        android:name="com.example.projectinfovalley.TridenteRoto"
+        android:label="fragment_tridente_roto"
+        tools:layout="@layout/fragment_tridente_roto" >
+        <action
+            android:id="@+id/action_tridenteRoto_to_puestoMercado"
+            app:destination="@id/puestoMercado" />
+    </fragment>
+    <fragment
+        android:id="@+id/granoCafe"
+        android:name="com.example.projectinfovalley.GranoCafe"
+        android:label="fragment_grano_cafe"
+        tools:layout="@layout/fragment_grano_cafe" >
+        <action
+            android:id="@+id/action_granoCafe_to_puestoMercado"
+            app:destination="@id/puestoMercado" />
+    </fragment>
+    <fragment
+        android:id="@+id/semillaCarambola"
+        android:name="com.example.projectinfovalley.SemillaCarambola"
+        android:label="fragment_semilla_carambola"
+        tools:layout="@layout/fragment_semilla_carambola" >
+        <action
+            android:id="@+id/action_semillaCarambola_to_puestoMercado"
+            app:destination="@id/puestoMercado" />
+    </fragment>
+    <fragment
+        android:id="@+id/tijerasEsquilar"
+        android:name="com.example.projectinfovalley.TijerasEsquilar"
+        android:label="fragment_tijeras_esquilar"
+        tools:layout="@layout/fragment_tijeras_esquilar" >
+        <action
+            android:id="@+id/action_tijerasEsquilar_to_puestoMercado"
+            app:destination="@id/puestoMercado" />
+    </fragment>
+    <fragment
+        android:id="@+id/cuboBasuraOro"
+        android:name="com.example.projectinfovalley.CuboBasuraOro"
+        android:label="fragment_cubo_basura_oro"
+        tools:layout="@layout/fragment_cubo_basura_oro" >
+        <action
+            android:id="@+id/action_cuboBasuraOro_to_puestoMercado"
+            app:destination="@id/puestoMercado" />
+    </fragment>
+    <fragment
+        android:id="@+id/lucio"
+        android:name="com.example.projectinfovalley.Lucio"
+        android:label="fragment_lucio"
+        tools:layout="@layout/fragment_lucio" >
+        <action
+            android:id="@+id/action_lucio_to_puestoMercado"
+            app:destination="@id/puestoMercado" />
+    </fragment>
+    <fragment
+        android:id="@+id/graciasCompra"
+        android:name="com.example.projectinfovalley.GraciasCompra"
+        android:label="fragment_gracias_compra"
+        tools:layout="@layout/fragment_gracias_compra" />
+    <fragment
+        android:id="@+id/gujaNeptuno"
+        android:name="com.example.projectinfovalley.GujaNeptuno"
+        android:label="fragment_guja_neptuno"
+        tools:layout="@layout/fragment_guja_neptuno" >
+        <action
+            android:id="@+id/action_gujaNeptuno_to_puestoMercado"
+            app:destination="@id/puestoMercado" />
+    </fragment>
+    <fragment
+        android:id="@+id/comprar"
+        android:name="com.example.projectinfovalley.Comprar"
+        android:label="fragment_comprar"
+        tools:layout="@layout/fragment_comprar" >
+        <action
+            android:id="@+id/action_comprar_to_calamarMedianoche"
+            app:destination="@id/calamarMedianoche" />
+        <action
+            android:id="@+id/action_comprar_to_esquirlaPrismatica"
+            app:destination="@id/esquirlaPrismatica" />
+        <action
+            android:id="@+id/action_comprar_to_incubadoraAvestruces"
+            app:destination="@id/incubadoraAvestruces" />
+        <action
+            android:id="@+id/action_comprar_to_hidrogelDeluxe"
+            app:destination="@id/hidrogelDeluxe" />
+        <action
+            android:id="@+id/action_comprar_to_baguette"
+            app:destination="@id/baguette" />
+        <action
+            android:id="@+id/action_comprar_to_cerdo2"
+            app:destination="@id/cerdo2" />
+        <action
+            android:id="@+id/action_comprar_to_mayonesaDinosaurio"
+            app:destination="@id/mayonesaDinosaurio" />
+        <action
+            android:id="@+id/action_comprar_to_recolectorAutomatico"
+            app:destination="@id/recolectorAutomatico" />
+        <action
+            android:id="@+id/action_comprar_to_radiador"
+            app:destination="@id/radiador" />
+        <action
+            android:id="@+id/action_comprar_to_oveja"
+            app:destination="@id/oveja" />
+    </fragment>
+    <fragment
+        android:id="@+id/calamarMedianoche"
+        android:name="com.example.projectinfovalley.CalamarMedianoche"
+        android:label="fragment_calamar_medianoche"
+        tools:layout="@layout/fragment_calamar_medianoche" >
+        <action
+            android:id="@+id/action_calamarMedianoche_to_graciasCompra"
+            app:destination="@id/graciasCompra" />
+    </fragment>
+    <fragment
+        android:id="@+id/esquirlaPrismatica"
+        android:name="com.example.projectinfovalley.EsquirlaPrismatica"
+        android:label="fragment_esquirla_prismatica"
+        tools:layout="@layout/fragment_esquirla_prismatica" >
+        <action
+            android:id="@+id/action_esquirlaPrismatica_to_graciasCompra"
+            app:destination="@id/graciasCompra" />
+    </fragment>
+    <fragment
+        android:id="@+id/incubadoraAvestruces"
+        android:name="com.example.projectinfovalley.IncubadoraAvestruces"
+        android:label="fragment_incubadora_avestruces"
+        tools:layout="@layout/fragment_incubadora_avestruces" >
+        <action
+            android:id="@+id/action_incubadoraAvestruces_to_graciasCompra"
+            app:destination="@id/graciasCompra" />
+    </fragment>
+    <fragment
+        android:id="@+id/hidrogelDeluxe"
+        android:name="com.example.projectinfovalley.HidrogelDeluxe"
+        android:label="fragment_hidrogel_deluxe"
+        tools:layout="@layout/fragment_hidrogel_deluxe" >
+        <action
+            android:id="@+id/action_hidrogelDeluxe_to_graciasCompra"
+            app:destination="@id/graciasCompra" />
+    </fragment>
+    <fragment
+        android:id="@+id/baguette"
+        android:name="com.example.projectinfovalley.Baguette"
+        android:label="fragment_baguette"
+        tools:layout="@layout/fragment_baguette" >
+        <action
+            android:id="@+id/action_baguette_to_graciasCompra"
+            app:destination="@id/graciasCompra" />
+    </fragment>
+    <fragment
+        android:id="@+id/cerdo2"
+        android:name="com.example.projectinfovalley.Cerdo"
+        android:label="fragment_cerdo"
+        tools:layout="@layout/fragment_cerdo" >
+        <action
+            android:id="@+id/action_cerdo2_to_graciasCompra"
+            app:destination="@id/graciasCompra" />
+    </fragment>
+    <fragment
+        android:id="@+id/mayonesaDinosaurio"
+        android:name="com.example.projectinfovalley.MayonesaDinosaurio"
+        android:label="fragment_mayonesa_dinosaurio"
+        tools:layout="@layout/fragment_mayonesa_dinosaurio" >
+        <action
+            android:id="@+id/action_mayonesaDinosaurio_to_graciasCompra"
+            app:destination="@id/graciasCompra" />
+    </fragment>
+    <fragment
+        android:id="@+id/recolectorAutomatico"
+        android:name="com.example.projectinfovalley.RecolectorAutomatico"
+        android:label="fragment_recolector_automatico"
+        tools:layout="@layout/fragment_recolector_automatico" >
+        <action
+            android:id="@+id/action_recolectorAutomatico_to_graciasCompra"
+            app:destination="@id/graciasCompra" />
+    </fragment>
+    <fragment
+        android:id="@+id/radiador"
+        android:name="com.example.projectinfovalley.Radiador"
+        android:label="fragment_radiador"
+        tools:layout="@layout/fragment_radiador" >
+        <action
+            android:id="@+id/action_radiador_to_graciasCompra"
+            app:destination="@id/graciasCompra" />
+    </fragment>
+    <fragment
+        android:id="@+id/oveja"
+        android:name="com.example.projectinfovalley.Oveja"
+        android:label="fragment_oveja"
+        tools:layout="@layout/fragment_oveja" >
+        <action
+            android:id="@+id/action_oveja_to_graciasCompra"
+            app:destination="@id/graciasCompra" />
+    </fragment>
+    <fragment
+        android:id="@+id/foroQA"
+        android:name="com.example.projectinfovalley.ForoQA"
+        android:label="fragment_foro_q_a"
+        tools:layout="@layout/fragment_foro_q_a" >
+        <action
+            android:id="@+id/action_foroQA_to_consultarPregunta"
+            app:destination="@id/consultarPregunta" />
+        <action
+            android:id="@+id/action_foroQA_to_graciasConsulta"
+            app:destination="@id/graciasConsulta" />
+    </fragment>
+    <fragment
+        android:id="@+id/consultarPregunta"
+        android:name="com.example.projectinfovalley.ConsultarPregunta"
+        android:label="fragment_consultar_pregunta"
+        tools:layout="@layout/fragment_consultar_pregunta" >
+        <action
+            android:id="@+id/action_consultarPregunta_to_foroQA"
+            app:destination="@id/foroQA" />
+    </fragment>
+    <fragment
+        android:id="@+id/graciasConsulta"
+        android:name="com.example.projectinfovalley.GraciasConsulta"
+        android:label="fragment_gracias_consulta"
+        tools:layout="@layout/fragment_gracias_consulta" >
+        <action
+            android:id="@+id/action_graciasConsulta_to_consultarPregunta2"
+            app:destination="@id/consultarPregunta" />
+    </fragment>
+</navigation>

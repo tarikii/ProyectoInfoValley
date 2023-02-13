@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#40CFFF"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/gallina"
+        android:layout_width="266dp"
+        android:layout_height="168dp"
+        android:src="@drawable/gallina"
+        app:layout_constraintBottom_toTopOf="@+id/menuBoxLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.28" />
+
+    <ImageView
+        android:id="@+id/menuBoxLogin"
+        android:layout_width="314dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/button_box_design"
+        app:layout_constraintBottom_toTopOf="@+id/Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="314dp"
+        android:layout_height="84dp"
+        android:text="Login"
+        android:textAlignment="center"
+        android:textColor="#AE6149"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/menuBoxLogin"
+        app:layout_constraintEnd_toEndOf="@+id/menuBoxLogin"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/menuBoxLogin"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="317dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="36dp"
+        android:hint="youremail@example.com"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/menuBoxNext"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_box_design"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Next"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:text="Next"
+        android:textAlignment="center"
+        android:textColor="#AE6149"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/menuBoxNext"
+        app:layout_constraintStart_toStartOf="@+id/menuBoxNext"
+        app:layout_constraintTop_toTopOf="@+id/menuBoxNext"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Password"
+        android:layout_width="99dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="12dp"
+        android:text="Contraseña"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="44dp"
+        android:hint="**********"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/menuBoxNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Email"
+        android:layout_width="44dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="12dp"
+        android:text="Email"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
