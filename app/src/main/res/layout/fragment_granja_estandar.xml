@@ -13,24 +13,58 @@
         android:layout_height="280dp"
         android:scaleType="centerCrop"
         android:src="@drawable/granja_estandar"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textoGranjaEstandar1"
         android:layout_width="362dp"
         android:layout_height="34dp"
+        android:layout_marginTop="40dp"
         android:text="La mayor parte de este mapa es tierra para  Agricultura, ideal para Cultivos y Animales."
         android:textAlignment="center"
         android:textColor="#000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="303dp" />
+        app:layout_constraintTop_toBottomOf="@+id/granjaEstandar" />
+
+    <TextView
+        android:id="@+id/textoGranjaEstandar2"
+        android:layout_width="362dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="36dp"
+        android:text="El número de casillas cultivables en este mapa es de 3427, con 235 casillas no cultivables pero construibles."
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoGranjaEstandar1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="156dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="44dp"
+        android:text="Habilidades asociables:"
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintEnd_toStartOf="@+id/habilidadAsociableEstandar"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoGranjaEstandar2" />
+
+    <ImageView
+        android:id="@+id/habilidadAsociableEstandar"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/agricultura_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoGranjaEstandar2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
