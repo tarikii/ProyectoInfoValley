@@ -1,14 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".GranjaMinera">
+    android:fillViewport="true"
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#40CFFF"
+        tools:context=".GranjaMinera">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/granjaMinera"
+            android:layout_width="630dp"
+            android:layout_height="215dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/granja_minera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textoGranjaMinera1"
+            android:layout_width="362dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="12dp"
+            android:text="La cima de la colina del suroeste genera piedras, minerales de oro y nodos de geoda, dependiendo del nivel de minería del jugador. A veces, la zona de minería puede estar bloqueada por un gran tocón, un gran tronco o una roca, por lo que es imposible entrar hasta que el jugador tenga la herramienta correcta."
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/granjaMinera" />
+
+        <TextView
+            android:id="@+id/textoGranjaMinera2"
+            android:layout_width="362dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+            android:text="El 50% de las veces, los jugadores pueden pescar los mismos peces que se encuentran en el río y estanque del Bosque Tizón. El 50% de las veces, los jugadores solo pescarán basura."
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoGranjaMinera1" />
+
+        <TextView
+            android:id="@+id/textoGranjaMinera4"
+            android:layout_width="168dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="48dp"
+            android:text="Habilidad asociable:"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintEnd_toStartOf="@+id/habilidadAsociableMinera"
+            app:layout_constraintHorizontal_bias="0.39"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoGranjaMinera2" />
+
+        <ImageView
+            android:id="@+id/habilidadAsociableMinera"
+            android:layout_width="61dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mineria_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoGranjaMinera2" />
+
+        <TextView
+            android:id="@+id/textoGranjaMinera5"
+            android:layout_width="123dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="12dp"
+            android:text="Mineria"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.97"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/habilidadAsociableMinera" />
+
+        <TextView
+            style="@style/MyButtonStyle"
+            android:layout_width="141dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="Volver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.059"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoGranjaMinera4"
+            app:layout_constraintVertical_bias="0.89" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

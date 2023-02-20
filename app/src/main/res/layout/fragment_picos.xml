@@ -1,14 +1,281 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Picos">
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#40CFFF"
+        tools:context=".Picos">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/solarionPico"
+            style="@style/MySolarionStyle"
+            android:layout_width="154dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:text="Picos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/scrollNombrePico"
+            style="@style/MyScrollStyle"
+            android:layout_width="90dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Nombre"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/solarionPico" />
+
+        <TextView
+            android:id="@+id/scrollPrecioPico"
+            style="@style/MyScrollStyle"
+            android:layout_width="90dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:text="Precio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/solarionPico" />
+
+        <ImageView
+            android:id="@+id/picoNormal"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/pico_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollNombrePico" />
+
+        <TextView
+            android:id="@+id/picoNormalTitulo"
+            android:layout_width="78dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:text="Picos"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@+id/picoNormal"
+            app:layout_constraintTop_toBottomOf="@+id/scrollNombrePico" />
+
+        <TextView
+            android:id="@+id/picoNormalPrecio"
+            android:layout_width="98dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="15dp"
+            android:text="Herramienta inicial"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollPrecioPico" />
+
+        <ImageView
+            android:id="@+id/picoCobre"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/pico_cobre"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/picoNormal" />
+
+        <TextView
+            android:id="@+id/picoCobreTitulo"
+            android:layout_width="99dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="45dp"
+            android:text="Picos de cobre"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@+id/picoCobre"
+            app:layout_constraintTop_toBottomOf="@+id/picoNormalTitulo" />
+
+        <TextView
+            android:id="@+id/picoCobrePrecio"
+            android:layout_width="58dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="35dp"
+            android:text="2000"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/picoNormalPrecio" />
+
+        <ImageView
+            android:id="@+id/picoCobreMoneda"
+            android:layout_width="29dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/coin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/picoCobrePrecio"
+            app:layout_constraintTop_toBottomOf="@+id/picoNormalPrecio" />
+
+        <ImageView
+            android:id="@+id/picoAcero"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/pico_acero"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/picoCobre" />
+
+        <TextView
+            android:id="@+id/picoAceroTitulo"
+            android:layout_width="99dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:text="Picos de acero"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@+id/picoAcero"
+            app:layout_constraintTop_toBottomOf="@+id/picoCobreTitulo" />
+
+        <TextView
+            android:id="@+id/picosAceroPrecio"
+            android:layout_width="58dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="35dp"
+            android:text="5000"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/picoCobrePrecio" />
+
+        <ImageView
+            android:id="@+id/picoAceroMoneda"
+            android:layout_width="29dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/coin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/picosAceroPrecio"
+            app:layout_constraintTop_toBottomOf="@+id/picoCobrePrecio" />
+
+        <ImageView
+            android:id="@+id/picosOro"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/pico_oro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/picoAcero" />
+
+        <TextView
+            android:id="@+id/picoOroTitulo"
+            android:layout_width="104dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:text="Picos de oro"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@+id/picosOro"
+            app:layout_constraintTop_toBottomOf="@+id/picoAceroTitulo" />
+
+        <TextView
+            android:id="@+id/picosOroPrecio"
+            android:layout_width="58dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="35dp"
+            android:text="10.000"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/picosAceroPrecio" />
+
+        <ImageView
+            android:id="@+id/picosOroMoneda"
+            android:layout_width="29dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/coin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/picosOroPrecio"
+            app:layout_constraintTop_toBottomOf="@+id/picosAceroPrecio" />
+
+        <ImageView
+            android:id="@+id/picosIridio"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/pico_iridio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/picosOro" />
+
+        <TextView
+            android:id="@+id/picosIridioTitulo"
+            android:layout_width="118dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="55dp"
+            android:text="Picos de iridio"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@+id/picosIridio"
+            app:layout_constraintTop_toBottomOf="@+id/picoOroTitulo" />
+
+        <TextView
+            android:id="@+id/picosIridioPrecio"
+            android:layout_width="58dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="35dp"
+            android:text="25.000"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/picosOroPrecio" />
+
+        <ImageView
+            android:id="@+id/picosIridioMoneda"
+            android:layout_width="29dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/coin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/picosIridioPrecio"
+            app:layout_constraintTop_toBottomOf="@+id/picosOroPrecio" />
+
+        <TextView
+            android:id="@+id/botonVolverPicos"
+            style="@style/MyButtonStyle"
+            android:layout_width="141dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="Volver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.103"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/picosIridio" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

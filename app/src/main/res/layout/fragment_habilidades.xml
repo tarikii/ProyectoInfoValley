@@ -1,14 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40CFFF"
     tools:context=".Habilidades">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/solarionHabilidades"
+        style="@style/MySolarionStyle"
+        android:layout_width="154dp"
+        android:layout_height="68dp"
+        android:text="Habilidades"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <ScrollView
+        android:layout_width="363dp"
+        android:layout_height="588dp"
+        android:background="#40CFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/solarionHabilidades">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="200dp">
+
+
+            <TextView
+                android:id="@+id/habilidadesTexto1"
+                android:layout_width="351dp"
+                android:layout_height="320dp"
+                android:layout_marginTop="30dp"
+                android:text="Para subir de nivel las habilidades, el jugador debe completar ciertas acciones relacionadas con esa habilidad. La experiencia en agricultura se obtiene al hacer crecer un cultivo por completo. La experiencia en recolección se gana al recoger alimentos silvestres por el mapa o talando árboles. La experiencia en minería se obtiene al romper rocas y depósitos de mineral. Pescar y usar trampas para cangrejos aumentará el nivel de pesca."
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/habilidadAsociableTexto"
+                android:layout_width="180dp"
+                android:layout_height="223dp"
+                android:text="Los niveles se obtienen cosechando cultivos y cuidando animales. Cada nivel otorga una destreza de +1 en la azada y la regadera (ver herramientas)."
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadesTexto1" />
+
+            <TextView
+                android:id="@+id/habilidadAsociableTitulo"
+                android:layout_width="85dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="92dp"
+                android:layout_marginEnd="25dp"
+                android:text="Agricultura"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/habilidadAsociableTexto"
+                app:layout_constraintStart_toEndOf="@+id/habilidadAsociableImagen"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadesTexto1" />
+
+            <ImageView
+                android:id="@+id/habilidadAsociableImagen"
+                android:layout_width="36dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="87dp"
+                android:background="@drawable/agricultura_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadesTexto1" />
+
+            <TextView
+                android:id="@+id/habilidadAsociableTexto2"
+                android:layout_width="169dp"
+                android:layout_height="179dp"
+                android:layout_marginTop="35dp"
+                android:text="La habilidad de minería aumenta usando el pico para romper rocas. Cada nivel aumenta en +1 la eficiencia del pico."
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadAsociableTexto" />
+
+            <TextView
+                android:id="@+id/habilidadAsociable2Titulo"
+                android:layout_width="85dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="188dp"
+                android:layout_marginEnd="35dp"
+                android:text="Mineria"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/habilidadAsociableTexto2"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadAsociableTitulo" />
+
+            <ImageView
+                android:id="@+id/habilidadAsociableImagen2"
+                android:layout_width="36dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="170dp"
+                android:background="@drawable/mineria_icon"
+                app:layout_constraintEnd_toStartOf="@+id/habilidadAsociable2Titulo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadAsociableImagen" />
+
+            <TextView
+                android:id="@+id/habilidadAsociableTexto3"
+                android:layout_width="171dp"
+                android:layout_height="265dp"
+                android:layout_marginTop="35dp"
+                android:text="La habilidad de Recolección incluye tanto bienes recolectados, como madera talada con un hacha. Cada nivel aumenta en +1 la eficiencia de la hacha."
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadAsociableTexto2" />
+
+            <TextView
+                android:id="@+id/habilidadAsociable3Titulo"
+                android:layout_width="85dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="234dp"
+                android:layout_marginEnd="35dp"
+                android:text="Recoleccion"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/habilidadAsociableTexto3"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadAsociable2Titulo" />
+
+            <ImageView
+                android:id="@+id/habilidadAsociableImagen3"
+                android:layout_width="36dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="215dp"
+                android:background="@drawable/recoleccion_icon"
+                app:layout_constraintEnd_toStartOf="@+id/habilidadAsociable3Titulo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadAsociableImagen2" />
+
+            <TextView
+                android:id="@+id/habilidadAsociableTexto4"
+                android:layout_width="171dp"
+                android:layout_height="251dp"
+                android:layout_marginTop="35dp"
+                android:text="La pesca es la habilidad asociada con pescar peces. Completar con éxito el minijuego de pesca aumenta la habilidad. Cada nivel aumenta en +1 la eficiencia de la caña de pescar."
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadAsociableTexto3" />
+
+            <TextView
+                android:id="@+id/habilidadAsociable4Titulo"
+                android:layout_width="85dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="285dp"
+                android:layout_marginEnd="35dp"
+                android:text="Pesca"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/habilidadAsociableTexto4"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadAsociable3Titulo" />
+
+            <ImageView
+                android:id="@+id/habilidadAsociableImagen4"
+                android:layout_width="36dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="275dp"
+                android:background="@drawable/pesca_icon"
+                app:layout_constraintEnd_toStartOf="@+id/habilidadAsociable4Titulo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadAsociableImagen3" />
+
+            <TextView
+                android:id="@+id/habilidadAsociableTexto5"
+                android:layout_width="171dp"
+                android:layout_height="220dp"
+                android:layout_marginTop="35dp"
+                android:text="Combate es una habilidad vinculada a la habilidad del jugador de combatir contra monstruos. Cada nivel añade +5 de puntos de salud."
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadAsociableTexto4" />
+
+            <TextView
+                android:id="@+id/habilidadAsociable5Titulo"
+                android:layout_width="85dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="225dp"
+                android:layout_marginEnd="35dp"
+                android:text="Combate"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/habilidadAsociableTexto5"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadAsociable4Titulo" />
+
+            <ImageView
+                android:id="@+id/habilidadAsociableImagen5"
+                android:layout_width="36dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="205dp"
+                android:background="@drawable/combate_icon"
+                app:layout_constraintEnd_toStartOf="@+id/habilidadAsociable5Titulo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadAsociableImagen4" />
+
+            <TextView
+                android:id="@+id/botonVolverHabilidades"
+                style="@style/MyButtonStyle"
+                android:layout_width="141dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="15dp"
+                android:text="Volver"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.059"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadAsociableImagen5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

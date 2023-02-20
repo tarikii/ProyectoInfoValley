@@ -10,7 +10,7 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="#40CFFF"
     tools:context=".Acceso">
 
@@ -29,8 +29,7 @@
     <TextView
         android:id="@+id/infovalley"
         style="@style/MyScrollStyle"
-        android:layout_width="214dp"
-        android:layout_height="44dp"
+        android:layout_height="48dp"
         android:layout_marginTop="52dp"
         android:text="InfoValley"
         android:textAlignment="center"
@@ -42,7 +41,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/login"
+        android:id="@+id/loginAcceso"
         style="@style/MyButtonStyle"
         android:layout_width="202dp"
         android:layout_height="59dp"
@@ -55,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/gallina" />
 
     <TextView
-        android:id="@+id/signup"
+        android:id="@+id/signupAcceso"
         style="@style/MyButtonStyle"
         android:layout_width="202dp"
         android:layout_height="59dp"
@@ -68,9 +67,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login" />
+        app:layout_constraintTop_toBottomOf="@+id/loginAcceso" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </ScrollView>
+</ScrollView>

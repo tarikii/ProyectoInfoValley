@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#40CFFF"
@@ -9,8 +16,8 @@
 
     <ImageView
         android:id="@+id/granjaEstandar"
-        android:layout_width="362dp"
-        android:layout_height="280dp"
+        android:layout_width="644dp"
+        android:layout_height="221dp"
         android:scaleType="centerCrop"
         android:src="@drawable/granja_estandar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,8 +28,8 @@
     <TextView
         android:id="@+id/textoGranjaEstandar1"
         android:layout_width="362dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
         android:text="La mayor parte de este mapa es tierra para  Agricultura, ideal para Cultivos y Animales."
         android:textAlignment="center"
         android:textColor="#000"
@@ -33,8 +40,8 @@
     <TextView
         android:id="@+id/textoGranjaEstandar2"
         android:layout_width="362dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="36dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="48dp"
         android:text="El número de casillas cultivables en este mapa es de 3427, con 235 casillas no cultivables pero construibles."
         android:textAlignment="center"
         android:textColor="#000"
@@ -43,11 +50,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textoGranjaEstandar1" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="156dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="44dp"
-        android:text="Habilidades asociables:"
+        android:id="@+id/textoGranjaEstandar3"
+        android:layout_width="168dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="48dp"
+        android:text="Habilidad asociable:"
         android:textAlignment="center"
         android:textColor="#000"
         app:layout_constraintEnd_toStartOf="@+id/habilidadAsociableEstandar"
@@ -59,12 +66,40 @@
         android:id="@+id/habilidadAsociableEstandar"
         android:layout_width="77dp"
         android:layout_height="77dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
         android:scaleType="centerCrop"
         android:src="@drawable/agricultura_icon"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textoGranjaEstandar4"
         app:layout_constraintTop_toBottomOf="@+id/textoGranjaEstandar2" />
+
+    <TextView
+        android:id="@+id/textoGranjaEstandar4"
+        android:layout_width="123dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Agricultura"
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/habilidadAsociableEstandar" />
+
+    <TextView
+        style="@style/MyButtonStyle"
+        android:layout_width="141dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoGranjaEstandar4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

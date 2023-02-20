@@ -1,14 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".GranjaFluvial">
+    android:fillViewport="true"
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#40CFFF"
+        tools:context=".GranjaFluvial">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/granjaFluvial"
+            android:layout_width="643dp"
+            android:layout_height="233dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/granja_fluvial"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textoGranjaFluvial1"
+            android:layout_width="362dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:text="La mayor parte de este mapa es agua. La Pesca es el punto fuerte en esta granja."
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/granjaFluvial" />
+
+        <TextView
+            android:id="@+id/textoGranjaFluvial2"
+            android:layout_width="362dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="28dp"
+            android:text="El agua reduce bastante el área de tierra cultivable."
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoGranjaFluvial1" />
+
+        <TextView
+            android:id="@+id/textoGranjaFluvial3"
+            android:layout_width="311dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="28dp"
+            android:text="El número de casillas cultivables en este mapa es de 1578, con 516 casillas no cultivables pero construibles."
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoGranjaFluvial2" />
+
+        <TextView
+            android:id="@+id/textoGranjaFluvial4"
+            android:layout_width="168dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="48dp"
+            android:text="Habilidad asociable:"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintEnd_toStartOf="@+id/habilidadAsociableFluvial"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoGranjaFluvial3" />
+
+        <ImageView
+            android:id="@+id/habilidadAsociableFluvial"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pesca_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.866"
+            app:layout_constraintStart_toStartOf="@+id/textoGranjaFluvial5"
+            app:layout_constraintTop_toBottomOf="@+id/textoGranjaFluvial3" />
+
+        <TextView
+            android:id="@+id/textoGranjaFluvial5"
+            android:layout_width="123dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Pesca"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.932"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/habilidadAsociableFluvial" />
+
+        <TextView
+            style="@style/MyButtonStyle"
+            android:layout_width="141dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="Volver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.059"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoGranjaFluvial4"
+            app:layout_constraintVertical_bias="0.89" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

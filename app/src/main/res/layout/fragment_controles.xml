@@ -1,14 +1,368 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40CFFF"
     tools:context=".Controles">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/solarionTitleControles"
+        style="@style/MySolarionStyle"
+        android:layout_width="154dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:text="Controles"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/scrollTeclas"
+        style="@style/MyScrollStyle"
+        android:layout_width="142dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Teclas"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/solarionTitleControles" />
+
+    <TextView
+        android:id="@+id/scrollDescripcion"
+        style="@style/MyScrollStyle"
+        android:layout_width="142dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Descripcion"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toEndOf="@+id/scrollTeclas"
+        app:layout_constraintTop_toBottomOf="@+id/solarionTitleControles" />
+
+    <ScrollView
+        android:layout_width="362dp"
+        android:layout_height="462dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/solarionTitleControles">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="200dp">
+
+            <ImageView
+                android:id="@+id/wasdImage"
+                android:layout_width="114dp"
+                android:layout_height="87dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/wasd_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/wasdDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="78dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                android:text="W: Mueve hacia arriba.\nA: Mueve hacia izquierda.\nS: Mueve hacia abajo.\nD: Mueve hacia derecha."
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.45"
+                app:layout_constraintStart_toEndOf="@+id/wasdImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/clickIzquierdoC"
+                android:layout_width="136dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/click_izquierdo_c"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wasdImage" />
+
+            <TextView
+                android:id="@+id/clickIzquierdoCDescription"
+                android:layout_width="173dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="40dp"
+                android:text="Usar una herramienta/colocar un objeto"
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/clickIzquierdoC"
+                app:layout_constraintTop_toBottomOf="@+id/wasdDescription" />
+
+            <ImageView
+                android:id="@+id/clickDerechoX"
+                android:layout_width="136dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/click_derecho_x"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clickIzquierdoC" />
+
+            <TextView
+                android:id="@+id/clickDerechoXDescription"
+                android:layout_width="94dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                android:text="Realizar acción"
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.434"
+                app:layout_constraintStart_toEndOf="@+id/clickDerechoX"
+                app:layout_constraintTop_toBottomOf="@+id/clickIzquierdoCDescription" />
+
+            <ImageView
+                android:id="@+id/escapeE"
+                android:layout_width="136dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/escape_e"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clickDerechoX" />
+
+            <TextView
+                android:id="@+id/escapeEDescription"
+                android:layout_width="68dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="28dp"
+                android:text="Abrir Menú"
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.538"
+                app:layout_constraintStart_toEndOf="@+id/escapeE"
+                app:layout_constraintTop_toBottomOf="@+id/clickDerechoXDescription" />
+
+            <ImageView
+                android:id="@+id/teclaF"
+                android:layout_width="50dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/tecla_f"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/escapeE" />
+
+            <TextView
+                android:id="@+id/teclaFDescription"
+                android:layout_width="69dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="8dp"
+                android:text="Abrir Diario"
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toEndOf="@+id/teclaF"
+                app:layout_constraintTop_toBottomOf="@+id/escapeEDescription" />
+
+            <ImageView
+                android:id="@+id/teclaM"
+                android:layout_width="42dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/tecla_m"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teclaF" />
+
+            <TextView
+                android:id="@+id/teclaMDescription"
+                android:layout_width="69dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="44dp"
+                android:text="Abrir Mapa"
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toEndOf="@+id/teclaM"
+                app:layout_constraintTop_toBottomOf="@+id/teclaFDescription" />
+
+            <ImageView
+                android:id="@+id/teclaY"
+                android:layout_width="42dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/tecla_y"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teclaM" />
+
+            <TextView
+                android:id="@+id/teclaYDescription"
+                android:layout_width="162dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="20dp"
+                android:text="Abrir Barra de Emoticones"
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.59"
+                app:layout_constraintStart_toEndOf="@+id/teclaY"
+                app:layout_constraintTop_toBottomOf="@+id/teclaMDescription" />
+
+            <ImageView
+                android:id="@+id/teclaTab"
+                android:layout_width="47dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/tecla_tab"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teclaY" />
+
+            <TextView
+                android:id="@+id/teclaTabDescription"
+                android:layout_width="198dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="12dp"
+                android:text="Intercambiar barra de Inventario"
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/teclaTab"
+                app:layout_constraintTop_toBottomOf="@+id/teclaYDescription" />
+
+            <ImageView
+                android:id="@+id/shiftIzquierdo"
+                android:layout_width="107dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/shift_izquierdo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teclaTab" />
+
+            <TextView
+                android:id="@+id/shiftIzquierdoDescription"
+                android:layout_width="165dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="25dp"
+                android:text="Correr / Caminar"
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/shiftIzquierdo"
+                app:layout_constraintTop_toBottomOf="@+id/teclaTabDescription" />
+
+            <ImageView
+                android:id="@+id/interroganteT"
+                android:layout_width="107dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/interrogante_t"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shiftIzquierdo" />
+
+            <TextView
+                android:id="@+id/interroganteTDescription"
+                android:layout_width="165dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="25dp"
+                android:text="Abrir Chat"
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/interroganteT"
+                app:layout_constraintTop_toBottomOf="@+id/shiftIzquierdoDescription" />
+
+            <ImageView
+                android:id="@+id/teclasAtajo"
+                android:layout_width="107dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/atajos_tecla"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interroganteT" />
+
+            <TextView
+                android:id="@+id/teclasAtajoDescription"
+                android:layout_width="165dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="Atajos de Inventario (Casillas)"
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/teclasAtajo"
+                app:layout_constraintTop_toBottomOf="@+id/interroganteTDescription" />
+
+            <ImageView
+                android:id="@+id/teclaF4"
+                android:layout_width="57dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/tecla_f4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teclasAtajo" />
+
+            <TextView
+                android:id="@+id/teclaF4Description"
+                android:layout_width="165dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="25dp"
+                android:text="Captura de Pantalla"
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/teclaF4"
+                app:layout_constraintTop_toBottomOf="@+id/teclasAtajoDescription" />
+
+            <TextView
+                android:id="@+id/volverBotonControles"
+                style="@style/MyButtonStyle"
+                android:layout_width="141dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="50dp"
+                android:text="Volver"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.091"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teclaF4" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

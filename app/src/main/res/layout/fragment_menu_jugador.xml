@@ -1,14 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40CFFF"
     tools:context=".MenuJugador">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/menuJugadorImagen"
+        android:layout_width="177dp"
+        android:layout_height="281dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/jugador_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+
+    <TextView
+        android:id="@+id/amigosTituloBoton"
+        style="@style/MyButtonStyle"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="45dp"
+        android:text="Amigos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuJugadorImagen" />
+
+    <TextView
+        android:id="@+id/inventarioTituloBoton"
+        style="@style/MyButtonStyle"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="45dp"
+        android:text="Inventario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amigosTituloBoton" />
+
+    <TextView
+        android:id="@+id/logrosTituloBoton"
+        style="@style/MyButtonStyle"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="15dp"
+        android:text="Logros"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inventarioTituloBoton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

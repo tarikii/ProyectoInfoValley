@@ -1,14 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".GraciasCompra">
+    android:fillViewport="true"
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#40CFFF"
+        tools:context=".GraciasCompra">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/chatMessageGraciasCompra"
+            style="@style/MyMessageStyle"
+            android:layout_width="257dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="45dp"
+            android:text="Gracias por tu compra!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/graciasCompraMiniatura"
+            android:layout_width="348dp"
+            android:layout_height="309dp"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/cat_love"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageGraciasCompra" />
+
+        <TextView
+            android:id="@+id/botonVolverGraciasCompra"
+            style="@style/MyButtonStyle"
+            android:layout_width="141dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="95dp"
+            android:layout_marginBottom="15dp"
+            android:text="Volver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/graciasCompraMiniatura" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

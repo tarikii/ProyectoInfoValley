@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40CFFF"
     tools:context=".OpcionesGenerales">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/solarionOpcionesGenerales"
+        style="@style/MySolarionStyle"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:text="Opciones generales"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/botonGuiaInicio"
+        style="@style/MyButtonStyle"
+        android:layout_width="220dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="100dp"
+        android:text="Guia inicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/solarionOpcionesGenerales" />
+
+
+    <TextView
+        android:id="@+id/botonHerramientas"
+        style="@style/MyButtonStyle"
+        android:layout_width="220dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="20dp"
+        android:text="Herramientas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonGuiaInicio" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

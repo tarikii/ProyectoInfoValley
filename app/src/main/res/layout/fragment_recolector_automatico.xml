@@ -1,14 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RecolectorAutomatico">
+    android:fillViewport="true"
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#40CFFF"
+        tools:context=".RecolectorAutomatico">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/chatMessageRecolectorAutomatico"
+            style="@style/MyMessageStyle"
+            android:layout_width="303dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="45dp"
+            android:text="Quieres comprar recolector automatico?"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/RecolectorAutomaticoPrecio"
+            android:layout_width="246dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="35dp"
+            android:text="25.000"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageRecolectorAutomatico" />
+
+        <ImageView
+            android:id="@+id/RecolectorAutomaticoMoneda"
+            android:layout_width="78dp"
+            android:layout_height="69dp"
+            android:layout_marginTop="203dp"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/coin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageRecolectorAutomatico" />
+
+        <TextView
+            android:id="@+id/siBotonRecolectorAutomatico"
+            style="@style/MyButtonStyle"
+            android:layout_width="80dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="75dp"
+            android:text="Si"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RecolectorAutomaticoPrecio" />
+
+        <TextView
+            android:id="@+id/noBotonRecolectorAutomatico"
+            style="@style/MyButtonStyle"
+            android:layout_width="80dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="65dp"
+            android:text="No"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/siBotonRecolectorAutomatico"
+            app:layout_constraintTop_toBottomOf="@+id/RecolectorAutomaticoMoneda" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,14 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40CFFF"
     tools:context=".Television">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/solarionTelevision"
+        style="@style/MySolarionStyle"
+        android:layout_width="154dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:text="Television"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/televisionTexto1"
+        android:layout_width="309dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="25dp"
+        android:text="La televisión proporciona información útil, como pronósticos del tiempo, adivinación de la suerte que tendrá el jugador, recetas gratis y otros consejos generales. Todos los jugadores tendrán una dentro de su casa cuando comiencen una nueva partida."
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/solarionTelevision" />
+
+    <ImageView
+        android:id="@+id/tvImage"
+        android:layout_width="102dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/tv_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/televisionTexto1" />
+
+    <ImageView
+        android:id="@+id/hombreDelTiempo"
+        android:layout_width="102dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/hombre_tiempo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/televisionTexto1" />
+
+    <TextView
+        android:id="@+id/televisionTexto2"
+        android:layout_width="306dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="25dp"
+        android:text="El tiempo dirá al jugador cómo estará el clima al día siguiente. Es especialmente útil cuando decidas mejorar tu regadera, porque permite al jugador planear con anticipación cuando lloverá para que así no tenga la necesidad de regar sus cultivos. Después de usar un Tótem de lluvia, el reporte de clima actualizará su pronóstico."
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvImage" />
+
+    <TextView
+        android:id="@+id/botonVolverTelevision"
+        style="@style/MyButtonStyle"
+        android:layout_width="141dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="40dp"
+        android:text="Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/televisionTexto2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

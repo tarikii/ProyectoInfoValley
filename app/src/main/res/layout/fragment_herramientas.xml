@@ -1,14 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40CFFF"
     tools:context=".Herramientas">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/solarionHerramientas"
+        style="@style/MySolarionStyle"
+        android:layout_width="154dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:text="Mejoras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/herramientasTexto1"
+        android:layout_width="365dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="25dp"
+        android:text="Puedes mejorar tus herramientas en la Herrería a cambio de oro y barras de metal, con mejoras que tardan dos días en completarse. Durante la mejora, no podrás comprar nada o pedir a Clint que abra geodas. Las herramientas deben mejorarse en orden ascendente de materiales; por ejemplo, una herramienta de cobre no puede mejorarse directamente a iridio."
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/solarionHerramientas" />
+
+    <TextView
+        android:id="@+id/consejosHerramientas"
+        style="@style/MyMessageStyle"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:text="Consejos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/herramientasTexto1" />
+
+    <TextView
+        android:id="@+id/herramientasTexto2"
+        android:layout_width="358dp"
+        android:layout_height="217dp"
+        android:layout_marginTop="20dp"
+        android:text="El significado práctico de que una actualización 'tarde dos días en completarse' es que te despertarás en dos días sucesivos sin tu herramienta. Puedes usar la herramienta durante el día y luego llevarla a la Herrería (antes de que cierre) para mejorarla. Al día siguiente te quedarás sin tu herramienta. Al otro día, debes ir a la Herrería a recoger la herramienta, y podrás utilizarla durante el resto del día.
+Cuando una herramienta haya terminado de actualizarse, aparecerá un mensaje en la esquina inferior izquierda de la pantalla al despertar el día."
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consejosHerramientas" />
+
+    <TextView
+        android:id="@+id/botonVolverHerramientas"
+        style="@style/MyButtonStyle"
+        android:layout_width="141dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="30dp"
+        android:text="Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/herramientasTexto2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

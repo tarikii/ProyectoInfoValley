@@ -1,14 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Lucio">
+    android:fillViewport="true"
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#40CFFF"
+        tools:context=".Lucio">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/chatMessageLucio"
+            style="@style/MyMessageStyle"
+            android:layout_width="282dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="45dp"
+            android:text="Quieres vender pez de Lucio?"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/LucioPrecio"
+            android:layout_width="145dp"
+            android:layout_height="74dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="35dp"
+            android:text="105"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageLucio" />
+
+        <ImageView
+            android:id="@+id/LucioMoneda"
+            android:layout_width="78dp"
+            android:layout_height="69dp"
+            android:layout_marginTop="203dp"
+            android:layout_marginEnd="70dp"
+            android:background="@drawable/coin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageLucio" />
+
+        <TextView
+            android:id="@+id/siBotonLucio"
+            style="@style/MyButtonStyle"
+            android:layout_width="80dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="55dp"
+            android:text="Si"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LucioPrecio" />
+
+        <TextView
+            android:id="@+id/noBotonLucio"
+            style="@style/MyButtonStyle"
+            android:layout_width="80dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="55dp"
+            android:text="No"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/siBotonLucio"
+            app:layout_constraintTop_toBottomOf="@+id/LucioMoneda" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

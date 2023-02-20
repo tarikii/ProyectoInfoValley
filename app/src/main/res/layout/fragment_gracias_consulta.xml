@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40CFFF"
     tools:context=".GraciasConsulta">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/textBoxGraciasConsulta"
+        style="@style/MyTextBoxStyle"
+        android:layout_width="194dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:text="Gracias por tu consulta!"
+        android:textColor="#CC2A61"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/mensajeGraciasForo"
+        android:layout_width="334dp"
+        android:layout_height="244dp"
+        android:layout_marginTop="50dp"
+        android:background="#FFFFFF"
+        android:gravity="top|start"
+        android:text="Un moderador del foro hara una validacion con tu pregunta (no queremos correr ningun riesgo) y una vez hecha la validacion se subira al foro!\n\n\nGracias por tu paciencia!"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textBoxGraciasConsulta" />
+
+    <TextView
+        android:id="@+id/botonVolverForo"
+        style="@style/MyButtonStyle"
+        android:layout_width="290dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="50dp"
+        android:text="Volver al foro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mensajeGraciasForo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

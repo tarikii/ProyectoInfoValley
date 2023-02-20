@@ -1,14 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40CFFF"
     tools:context=".PuestoMercado">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/chatMessagePuestoMercado"
+        style="@style/MyMessageStyle"
+        android:layout_width="303dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="45dp"
+        android:text="Tu producto se ha puesto en el mercado!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/puestoMercadoMiniatura"
+        android:layout_width="360dp"
+        android:layout_height="286dp"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/mercado_online"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatMessagePuestoMercado" />
+
+    <TextView
+        android:id="@+id/botonVolverPuestoMercado"
+        style="@style/MyButtonStyle"
+        android:layout_width="141dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginBottom="15dp"
+        android:text="Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/puestoMercadoMiniatura" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

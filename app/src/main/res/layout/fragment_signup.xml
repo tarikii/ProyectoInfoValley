@@ -1,163 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:scrollbars="horizontal"
+    android:scrollbarStyle="outsideOverlay"
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="#40CFFF"
     tools:context=".Signup">
 
     <ImageView
         android:id="@+id/gallina"
-        android:layout_width="256dp"
-        android:layout_height="168dp"
+        android:layout_width="213dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/gallina"
-        app:layout_constraintBottom_toTopOf="@+id/menuBoxSignUp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/menuBoxSignUp"
-        android:layout_width="264dp"
+        android:layout_width="231dp"
         android:layout_height="89dp"
-        android:src="@drawable/button_box_design"
-        app:layout_constraintBottom_toBottomOf="@+id/login"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/menu_box"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gallina" />
 
     <TextView
-        android:id="@+id/login"
-        android:layout_width="218dp"
-        android:layout_height="86dp"
-        android:layout_marginBottom="32dp"
+        android:id="@+id/signupSignup"
+        android:layout_width="224dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="20dp"
         android:text="Sign Up"
         android:textAlignment="center"
         android:textColor="#AE6149"
-        android:textSize="45sp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/Email"
+        app:layout_constraintBottom_toBottomOf="@+id/menuBoxSignUp"
         app:layout_constraintEnd_toEndOf="@+id/menuBoxSignUp"
         app:layout_constraintStart_toStartOf="@+id/menuBoxSignUp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="@+id/menuBoxSignUp" />
 
     <EditText
         android:id="@+id/editTextNewPassword"
         android:layout_width="322dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="5dp"
         android:hint="**************"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/Password"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.675"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/NewPassword" />
 
     <EditText
         android:id="@+id/editTextConfirmPassword"
         android:layout_width="322dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="20dp"
         android:hint="**********"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/Next"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.672"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <ImageButton
-        android:id="@+id/menuBoxNext"
-        android:layout_width="160dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/button_box_design"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 
     <TextView
-        android:id="@+id/Next"
+        android:id="@+id/menuBoxNextSignup"
+        style="@style/MyButtonStyle"
         android:layout_width="160dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
         android:text="Next"
-        android:textAlignment="center"
-        android:textColor="#AE6149"
         android:textSize="30sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/menuBoxNext"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="@+id/menuBoxNext"
-        app:layout_constraintTop_toTopOf="@+id/menuBoxNext"
-        app:layout_constraintVertical_bias="0.358"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextConfirmPassword"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/Email"
         android:layout_width="114dp"
         android:layout_height="23dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="20dp"
         android:text="Nuevo Email"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/menuBoxSignUp" />
 
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="321dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="5dp"
         android:hint="youremail@example.com"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/NewPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.675"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/Email" />
 
     <TextView
         android:id="@+id/Password"
         android:layout_width="159dp"
         android:layout_height="20dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="12dp"
         android:text="Repite la Contraseña"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextConfirmPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNewPassword" />
 
     <TextView
         android:id="@+id/NewPassword"
         android:layout_width="93dp"
         android:layout_height="20dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="15dp"
         android:text="Contraseña"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNewPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintHorizontal_bias="0.141"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

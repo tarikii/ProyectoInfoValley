@@ -1,15 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Cerdo">
+    android:fillViewport="true"
+    android:layout_height="match_parent">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#40CFFF"
+        tools:context=".Cerdo">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/menubox_button_background"
-        android:text="Button with Rectangle Shape"/>
+        <TextView
+            android:id="@+id/chatMessageCerdo"
+            style="@style/MyMessageStyle"
+            android:layout_width="303dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="45dp"
+            android:text="Quieres comprar cerdo?"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/CerdoPrecio"
+            android:layout_width="246dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="35dp"
+            android:text="16.000"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageCerdo" />
+
+        <ImageView
+            android:id="@+id/CerdoMoneda"
+            android:layout_width="78dp"
+            android:layout_height="69dp"
+            android:layout_marginTop="203dp"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/coin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageCerdo" />
+
+        <TextView
+            android:id="@+id/siBotonCerdo"
+            style="@style/MyButtonStyle"
+            android:layout_width="80dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="75dp"
+            android:text="Si"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CerdoPrecio" />
+
+        <TextView
+            android:id="@+id/noBotonCerdo"
+            style="@style/MyButtonStyle"
+            android:layout_width="80dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="65dp"
+            android:text="No"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/siBotonCerdo"
+            app:layout_constraintTop_toBottomOf="@+id/CerdoMoneda" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

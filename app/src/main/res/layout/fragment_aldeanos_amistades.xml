@@ -1,14 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40CFFF"
     tools:context=".AldeanosAmistades">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/aldeanosAmistadesSolarion"
+        style="@style/MySolarionStyle"
+        android:layout_width="219dp"
+        android:layout_height="59dp"
+        android:text="Aldeanos y amistades"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/aldeanosAmistadesTexto"
+        android:layout_width="348dp"
+        android:layout_height="349dp"
+        android:text="Dar regalos a los aldeanos aumentará su nivel de amistad. Puedes hacer un regalo resaltándolo en tu inventario o seleccionándolo pulsando su número de tecla de acceso directo y luego haciendo clic con el botón izquierdo del ratón en la persona a la que deseas regalarle el artículo. A medida que se gana la amistad, los aldeanos te enviarán recetas de cocina o comida por correo, te darán acceso a sus habitaciones y te tratarán diferente en los diálogos. Las escenas de animación e interacciones únicas también pueden ocurrir a medida que aumenta la amistad. El jugador debe obtener un alto nivel de amistad para poder prometerse o casarse con un aldeano disponible para casarse."
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aldeanosAmistadesSolarion" />
+
+    <ImageView
+        android:id="@+id/abigailImage"
+        android:layout_width="122dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/abigail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aldeanosAmistadesTexto" />
+
+    <ImageView
+        android:id="@+id/pennyImage"
+        android:layout_width="123dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/penny"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toEndOf="@+id/abigailImage"
+        app:layout_constraintTop_toBottomOf="@+id/aldeanosAmistadesTexto" />
+
+    <TextView
+        android:id="@+id/botonVolverAldeanosAmistades"
+        style="@style/MyButtonStyle"
+        android:layout_width="141dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="41dp"
+        android:text="Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/abigailImage" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

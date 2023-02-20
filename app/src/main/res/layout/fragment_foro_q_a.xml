@@ -1,14 +1,271 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40CFFF"
     tools:context=".ForoQA">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/solarionForoQA"
+        style="@style/MySolarionStyle"
+        android:layout_width="162dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:text="Preguntas del foro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/scrollForoQA"
+        style="@style/MyScrollStyle"
+        android:layout_width="212dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="25dp"
+        android:text="Preguntas ya resueltas"
+        android:textColor="#00FF0A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/solarionForoQA" />
+
+    <ScrollView
+        android:layout_width="362dp"
+        android:layout_height="462dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollForoQA">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="200dp">
+
+            <TextView
+                android:id="@+id/messageXasthur"
+                style="@style/MyMessageStyle"
+                android:layout_width="98dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="220dp"
+                android:text="Xasthur777"
+                android:textColor="#FFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/xasthur777Consulta"
+                android:layout_width="140dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="150dp"
+                android:background="#FFF"
+                android:text="El juego tiene final?"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/messageXasthur" />
+
+
+            <TextView
+                android:id="@+id/respuestasXasthur777"
+                style="@style/MyTextBoxStyle"
+                android:layout_width="132dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="120dp"
+                android:text="Respuestas"
+                android:textColor="#EE00FF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/xasthur777Consulta" />
+
+            <TextView
+                android:id="@+id/messageAlixers12"
+                style="@style/MyMessageStyle"
+                android:layout_width="98dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="150dp"
+                android:text="Alixers12"
+                android:textColor="#FFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/respuestasXasthur777" />
+
+            <TextView
+                android:id="@+id/respuestaAlixers12"
+                android:layout_width="154dp"
+                android:layout_height="95dp"
+                android:layout_marginEnd="90dp"
+                android:background="#FFF"
+                android:text="Stardew Valley no tiene un final oficial. Puedes seguir jugando todo el tiempo que quieras."
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/messageAlixers12" />
+
+
+            <TextView
+                android:id="@+id/messageAlibaba32"
+                style="@style/MyMessageStyle"
+                android:text="Alibaba32"
+                android:layout_width="98dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="220dp"
+                android:textColor="#FFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/respuestaAlixers12" />
+
+            <TextView
+                android:id="@+id/alibaba32Consulta"
+                android:layout_width="147dp"
+                android:layout_height="89dp"
+                android:layout_marginEnd="165dp"
+                android:background="#FFF"
+                android:text="¿Por qué decide tu personaje irse a vivir a la granja de su abuelo?"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/messageAlibaba32" />
+
+            <TextView
+                android:id="@+id/respuestasAlibaba32"
+                style="@style/MyTextBoxStyle"
+                android:layout_width="132dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="120dp"
+                android:text="Respuestas"
+                android:textColor="#EE00FF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/alibaba32Consulta" />
+
+            <TextView
+                android:id="@+id/messageLeviathan51"
+                style="@style/MyMessageStyle"
+                android:layout_width="98dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="150dp"
+                android:text="Leviathan51"
+                android:textColor="#FFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/respuestasAlibaba32" />
+
+            <TextView
+                android:id="@+id/respuestaLeviathan51"
+                android:layout_width="159dp"
+                android:layout_height="113dp"
+                android:layout_marginEnd="90dp"
+                android:background="#FFF"
+                android:text="Porque su abuelo se lo recomienda, quiere una vida mas tranquila y esta cansado de estar tan estresado en su oficina."
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/messageLeviathan51" />
+
+            <TextView
+                android:id="@+id/messageTelepathic666"
+                style="@style/MyMessageStyle"
+                android:text="Telepathic666"
+                android:layout_width="98dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="220dp"
+                android:textColor="#FFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/respuestaLeviathan51" />
+
+            <TextView
+                android:id="@+id/telepathic666Consulta"
+                android:layout_width="147dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="165dp"
+                android:background="#FFF"
+                android:text="¿Cuántos niveles tienen las minas?"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/messageTelepathic666" />
+
+            <TextView
+                android:id="@+id/respuestasTelepathic666"
+                style="@style/MyTextBoxStyle"
+                android:layout_width="132dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="120dp"
+                android:text="Respuestas"
+                android:textColor="#EE00FF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/telepathic666Consulta" />
+
+            <TextView
+                android:id="@+id/messageCalamardo90"
+                style="@style/MyMessageStyle"
+                android:layout_width="98dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="150dp"
+                android:text="Calamardo90"
+                android:textColor="#FFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/respuestasTelepathic666" />
+
+            <TextView
+                android:id="@+id/respuestaCalamardo90"
+                android:layout_width="169dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="90dp"
+                android:background="#FFF"
+                android:text="Hay un total de 120 niveles en la mina."
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/messageCalamardo90" />
+
+
+            <TextView
+                android:id="@+id/botonVolverForoQA"
+                style="@style/MyButtonStyle"
+                android:layout_width="141dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="160dp"
+                android:layout_marginBottom="100dp"
+                android:text="Volver"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/respuestaCalamardo90" />
+
+            <TextView
+                android:id="@+id/ingresaTuPregunta"
+                style="@style/MyButtonStyle"
+                android:layout_width="167dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="150dp"
+                android:text="Ingresa tu pregunta"
+                android:textColor="#003091"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/botonVolverForoQA"
+                app:layout_constraintTop_toBottomOf="@+id/respuestaCalamardo90" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

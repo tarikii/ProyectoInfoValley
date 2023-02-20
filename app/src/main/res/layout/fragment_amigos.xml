@@ -1,14 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40CFFF"
     tools:context=".Amigos">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/solarionAmigos"
+        style="@style/MySolarionStyle"
+        android:layout_width="154dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:text="Amigos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/amigoAlex"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/amigos_alex"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/solarionAmigos" />
+
+    <ImageView
+        android:id="@+id/amigoElliott"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/amigos_elliott"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/amigoAlex"
+        app:layout_constraintTop_toBottomOf="@+id/solarionAmigos" />
+
+    <TextView
+        android:id="@+id/amigoAlexTexto"
+        android:layout_width="67dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
+        android:text="Alex"
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amigoAlex" />
+
+    <TextView
+        android:id="@+id/amigoElliottTexto"
+        android:layout_width="67dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="70dp"
+        android:text="Elliott"
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amigoElliott" />
+
+    <ImageView
+        android:id="@+id/amigoSebastian"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/amigos_sebastian"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amigoAlexTexto" />
+
+    <ImageView
+        android:id="@+id/amigoSam"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/amigos_sam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/amigoSebastian"
+        app:layout_constraintTop_toBottomOf="@+id/amigoElliottTexto" />
+
+    <TextView
+        android:id="@+id/amigoSebastianTexto"
+        android:layout_width="67dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
+        android:text="Sebastian"
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amigoSebastian" />
+
+    <TextView
+        android:id="@+id/amigoSamTexto"
+        android:layout_width="67dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="70dp"
+        android:text="Sam"
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amigoSam" />
+
+    <ImageView
+        android:id="@+id/amigoAbigail"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/amigos_abigail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amigoSebastianTexto" />
+
+    <ImageView
+        android:id="@+id/amigoHaley"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/amigos_haley"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/amigoAbigail"
+        app:layout_constraintTop_toBottomOf="@+id/amigoSamTexto" />
+
+    <TextView
+        android:id="@+id/amigoAbigailTexto"
+        android:layout_width="67dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
+        android:text="Abigail"
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amigoAbigail" />
+
+    <TextView
+        android:id="@+id/amigoHaleyTexto"
+        android:layout_width="67dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="70dp"
+        android:text="Haley"
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amigoHaley" />
+
+
+    <TextView
+        android:id="@+id/botonVolverAmigos"
+        style="@style/MyButtonStyle"
+        android:layout_width="141dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="10dp"
+        android:text="Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amigoAbigailTexto" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

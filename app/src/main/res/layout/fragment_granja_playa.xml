@@ -1,14 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".GranjaPlaya">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#40CFFF"
+        tools:context=".GranjaPlaya">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/granjaPlaya"
+            android:layout_width="643dp"
+            android:layout_height="233dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/granja_playa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="642dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/granjaPlaya">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="200dp">
+
+            <TextView
+                android:id="@+id/textoGranjaPlaya1"
+                android:layout_width="362dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:text="Buena recolección y pesca, y un montón de espacio abierto. A veces, cajas de suministros llegan a la orilla."
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textoGranjaPlaya2"
+                android:layout_width="362dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:text="Tanto los objetos recolectables del bosque como los de la playa pueden aparecer."
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoGranjaPlaya1" />
+
+            <TextView
+                android:id="@+id/textoGranjaPlaya3"
+                android:layout_width="362dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="32dp"
+                android:text="Los aspersores no funcionan en el suelo arenoso."
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoGranjaPlaya2" />
+
+            <TextView
+                android:id="@+id/textoGranjaPlaya4"
+                android:layout_width="362dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="32dp"
+                android:text="Destinado a 'jugadores experimentados', no como primera granja."
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoGranjaPlaya3" />
+
+            <TextView
+                android:id="@+id/textoGranjaPlaya5"
+                android:layout_width="362dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="32dp"
+                android:text="El número de casillas cultivables en este mapa es de 2.700, con 1.928 casillas no cultivables pero construibles."
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoGranjaPlaya4" />
+
+            <TextView
+                android:id="@+id/textoGranjaPlaya6"
+                android:layout_width="362dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="32dp"
+                android:text="Al pescar: El 15% de las veces, los jugadores atraparán algas, el 5,1% de las veces, los jugadores atraparán una ostra , coral , mejillón o berberecho."
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoGranjaPlaya5" />
+
+            <TextView
+                android:id="@+id/textoGranjaPlaya7"
+                android:layout_width="362dp"
+                android:layout_height="95dp"
+                android:layout_marginTop="32dp"
+                android:text="Las posibilidades de los cuatro objetos son iguales.El 52,73% de las veces, los jugadores pescarán peces del océano , es decir , peces que se encuentran en la playa. El resto de las veces, los jugadores atraparán basura."
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoGranjaPlaya6" />
+
+            <TextView
+                android:id="@+id/textoGranjaPlaya8"
+                android:layout_width="168dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="135dp"
+                android:layout_marginTop="52dp"
+                android:text="Habilidad Asociable:"
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toStartOf="@+id/habilidadAsociablePlaya"
+                app:layout_constraintHorizontal_bias="0.146"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoGranjaPlaya7" />
+
+            <ImageView
+                android:id="@+id/habilidadAsociablePlaya"
+                android:layout_width="67dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/recoleccion_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textoGranjaPlaya8"
+                app:layout_constraintTop_toBottomOf="@+id/textoGranjaPlaya7" />
+
+            <TextView
+                android:id="@+id/textoGranjaPlaya9"
+                android:layout_width="133dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="16dp"
+                android:text="Recoleccion"
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadAsociablePlaya" />
+
+            <ImageView
+                android:id="@+id/habilidadAsociablePlaya2"
+                android:layout_width="67dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="37dp"
+                android:layout_marginEnd="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pesca_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.68"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoGranjaPlaya9" />
+
+            <TextView
+                android:id="@+id/textoGranjaPlaya10"
+                android:layout_width="133dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="180dp"
+                android:layout_marginTop="16dp"
+                android:text="Pesca"
+                android:textAlignment="center"
+                android:textColor="#000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habilidadAsociablePlaya2" />
+
+            <TextView
+                android:id="@+id/botonVolverPlaya"
+                style="@style/MyButtonStyle"
+                android:layout_width="141dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="120dp"
+                android:text="Volver"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.059"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoGranjaPlaya10" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

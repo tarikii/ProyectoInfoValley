@@ -1,14 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Energia">
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#40CFFF"
+        tools:context=".Energia">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/solarionEnergia"
+            style="@style/MySolarionStyle"
+            android:layout_width="149dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="15dp"
+            android:text="Energia"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/energiaTexto1"
+            android:layout_width="349dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="25dp"
+            android:text="La energía limita la productividad. Una de las principales maneras de evitar esto es comiendo."
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/solarionEnergia" />
+
+        <TextView
+            android:id="@+id/energiaTexto2"
+            android:layout_width="361dp"
+            android:layout_height="109dp"
+            android:layout_marginTop="20dp"
+            android:text="Comer alimentos es una acción, para la cual los controles predeterminados son: hacer clic con el botón derecho del ratón sobre la comida, o pulsar X con el alimento resaltado en el inventario y, a continuación, hacer clic en Sí en el cuadro de diálogo de confirmación para comer el alimento."
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/energiaTexto1" />
+
+        <TextView
+            android:id="@+id/energiaTexto3"
+            android:layout_width="361dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="20dp"
+            android:text=" La mayoría de cultivos y objetos de recolección se pueden consumir para recuperar energía."
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/energiaTexto2" />
+
+        <TextView
+            android:id="@+id/energiaTexto4"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="25dp"
+            android:text="Dormir al final del día restaurará la energía del jugador. Después de las 12:00AM, el jugador no recuperará el 100% de energía."
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/energiaTexto3" />
+
+        <TextView
+            android:id="@+id/energiaTexto5"
+            android:layout_width="343dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:text="Si el jugador está agotado cuando se acuesta o se ve obligado a dormir más tarde de las 2:00AM, se despertará por la mañana con la energía por la mitad."
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/energiaTexto4" />
+
+        <ImageView
+            android:id="@+id/barraEnergia"
+            android:layout_width="96dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/barra_energia"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/energiaTexto5" />
+
+        <TextView
+            android:id="@+id/botonVolverEnergia"
+            style="@style/MyButtonStyle"
+            android:layout_width="141dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:text="Volver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.059"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barraEnergia" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

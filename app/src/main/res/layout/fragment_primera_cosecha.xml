@@ -1,14 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40CFFF"
     tools:context=".PrimeraCosecha">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/solarionPrimeraCosecha"
+        style="@style/MySolarionStyle"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:text="Preparando tu primera cosecha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/primeraCosechaTexto1"
+        android:layout_width="352dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="25dp"
+        android:text="Usa el hacha, el pico y la guadaña sobre los troncos, piedras, césped y arbustos de tu granja para despejar unas 15 casillas de suelo."
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/solarionPrimeraCosecha" />
+
+    <TextView
+        android:id="@+id/primeraCosechaTexto2"
+        android:layout_width="349dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="25dp"
+        android:text="Usa la azada para arar la tierra y plantar las 15 semillas de chirivía que te ha regalado el alcalde Lewis."
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primeraCosechaTexto1" />
+
+    <TextView
+        android:id="@+id/primeraCosechaTexto3"
+        android:layout_width="344dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="25dp"
+        android:text="Usa la regadera para regar las semillas plantadas."
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primeraCosechaTexto2" />
+
+    <TextView
+        android:id="@+id/primeraCosechaTexto4"
+        android:layout_width="344dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="25dp"
+        android:text="Continúa regando tus cultivos una vez al día hasta que crezcan y se puedan cosechar. Tus chirivías estarán listas para cosechar en 4 días."
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primeraCosechaTexto3" />
+
+    <TextView
+        android:id="@+id/primeraCosechaTexto5"
+        android:layout_width="343dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="25dp"
+        android:text="Un consejo útil: los árboles de arce, pino y roble tienen la misma proporción de golpes: 10 golpes de tu hacha. Los tocones solo reciben 5 impactos de tu hacha."
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primeraCosechaTexto4" />
+
+    <ImageView
+        android:id="@+id/hombrePrimeraCosecha"
+        android:layout_width="70dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/hombre_primera_cosecha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primeraCosechaTexto5" />
+
+    <TextView
+        android:id="@+id/botonVolverPrimeraCosecha"
+        style="@style/MyButtonStyle"
+        android:layout_width="141dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="25dp"
+        android:text="Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hombrePrimeraCosecha" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

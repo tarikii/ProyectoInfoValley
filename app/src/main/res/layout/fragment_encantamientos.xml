@@ -1,14 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40CFFF"
     tools:context=".Encantamientos">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/solarionEncantamientos"
+        style="@style/MySolarionStyle"
+        android:layout_width="154dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:text="Encantamientos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/cañaPescarEncantamientos"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/cana_pescar_encantamiento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/solarionEncantamientos" />
+
+    <TextView
+        android:id="@+id/autoGancho"
+        android:layout_width="88dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="35dp"
+        android:text="Auto-Gancho"
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintStart_toEndOf="@+id/cañaPescarEncantamientos"
+        app:layout_constraintTop_toBottomOf="@+id/solarionEncantamientos" />
+
+    <TextView
+        android:id="@+id/autoGanchoTexto"
+        android:layout_width="143dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:text="Automáticamente engancha al pez cuando muerde (lo cual inicia el minijuego)."
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/autoGancho"
+        app:layout_constraintTop_toBottomOf="@+id/solarionEncantamientos" />
+
+    <ImageView
+        android:id="@+id/azadaEncantamientos"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/azada_encantamiento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cañaPescarEncantamientos" />
+
+    <TextView
+        android:id="@+id/arqueologo"
+        android:layout_width="88dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="90dp"
+        android:text="Arqueólogo"
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintStart_toEndOf="@+id/azadaEncantamientos"
+        app:layout_constraintTop_toBottomOf="@+id/autoGancho" />
+
+    <TextView
+        android:id="@+id/arqueologoTexto"
+        android:layout_width="143dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:text="Duplica la probabilidad de encontrar artefactos en los huecos de artefactos."
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/arqueologo"
+        app:layout_constraintTop_toBottomOf="@+id/autoGanchoTexto" />
+
+    <ImageView
+        android:id="@+id/regaderaEncantamientos"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/regadera_encantamiento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/azadaEncantamientos" />
+
+    <TextView
+        android:id="@+id/sinFondo"
+        android:layout_width="88dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="95dp"
+        android:text="Sin Fondo"
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintStart_toEndOf="@+id/regaderaEncantamientos"
+        app:layout_constraintTop_toBottomOf="@+id/arqueologo" />
+
+    <TextView
+        android:id="@+id/sinFondoTexto"
+        android:layout_width="153dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="5dp"
+        android:text="La regadera nunca se quedará sin agua."
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sinFondo"
+        app:layout_constraintTop_toBottomOf="@+id/arqueologoTexto" />
+
+    <ImageView
+        android:id="@+id/picoEncantamientos"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/pico_encantamiento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regaderaEncantamientos" />
+
+    <TextView
+        android:id="@+id/eficiente"
+        android:layout_width="88dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="45dp"
+        android:text="Eficiente"
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintStart_toEndOf="@+id/picoEncantamientos"
+        app:layout_constraintTop_toBottomOf="@+id/sinFondo" />
+
+    <TextView
+        android:id="@+id/eficienteTexto"
+        android:layout_width="160dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="5dp"
+        android:text="No usa energía."
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/eficiente"
+        app:layout_constraintTop_toBottomOf="@+id/sinFondoTexto" />
+
+    <ImageView
+        android:id="@+id/hachaEncantamientos"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/hacha_encantamiento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/picoEncantamientos" />
+
+    <TextView
+        android:id="@+id/poderoso"
+        android:layout_width="88dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="70dp"
+        android:text="Poderoso"
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintStart_toEndOf="@+id/hachaEncantamientos"
+        app:layout_constraintTop_toBottomOf="@+id/eficiente" />
+
+    <TextView
+        android:id="@+id/poderosoTexto"
+        android:layout_width="162dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="5dp"
+        android:text="Añade un nivel extra de poder."
+        android:textAlignment="center"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/poderoso"
+        app:layout_constraintTop_toBottomOf="@+id/eficienteTexto" />
+
+    <TextView
+        android:id="@+id/botonVolverEncantamientos"
+        style="@style/MyButtonStyle"
+        android:layout_width="141dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="35dp"
+        android:text="Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hachaEncantamientos" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

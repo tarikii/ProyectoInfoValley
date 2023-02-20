@@ -1,14 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".GujaNeptuno">
+    android:fillViewport="true"
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#40CFFF"
+        tools:context=".GujaNeptuno">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/chatMessageGujaNeptuno"
+            style="@style/MyMessageStyle"
+            android:layout_width="282dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="45dp"
+            android:text="Quieres vender guja de neptuno?"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/GujaNeptunoPrecio"
+            android:layout_width="145dp"
+            android:layout_height="74dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="35dp"
+            android:text="250"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="50sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageGujaNeptuno" />
+
+        <ImageView
+            android:id="@+id/GujaNeptunoMoneda"
+            android:layout_width="78dp"
+            android:layout_height="69dp"
+            android:layout_marginTop="203dp"
+            android:layout_marginEnd="80dp"
+            android:background="@drawable/coin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageGujaNeptuno" />
+
+        <TextView
+            android:id="@+id/siBotonGujaNeptuno"
+            style="@style/MyButtonStyle"
+            android:layout_width="80dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="55dp"
+            android:text="Si"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GujaNeptunoPrecio" />
+
+        <TextView
+            android:id="@+id/noBotonGujaNeptuno"
+            style="@style/MyButtonStyle"
+            android:layout_width="80dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="55dp"
+            android:text="No"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/siBotonGujaNeptuno"
+            app:layout_constraintTop_toBottomOf="@+id/GujaNeptunoMoneda" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,14 +1,248 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CanaPescar">
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="#40CFFF"
+        tools:context=".CanaPescar">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/solarionCaña"
+            style="@style/MySolarionStyle"
+            android:layout_width="154dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:text="Caña de pescar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/scrollNombreCaña"
+            style="@style/MyScrollStyle"
+            android:layout_width="90dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Nombre"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/solarionCaña" />
+
+        <TextView
+            android:id="@+id/scrollPrecioCaña"
+            style="@style/MyScrollStyle"
+            android:layout_width="90dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:text="Precio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/solarionCaña" />
+
+        <ImageView
+            android:id="@+id/cañaEntrenamiento"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/cana_entrenamiento"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollNombreCaña" />
+
+        <TextView
+            android:id="@+id/cañaEntrenamientoTitulo"
+            android:layout_width="99dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="45dp"
+            android:text="Caña de entrenamiento"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@+id/cañaEntrenamiento"
+            app:layout_constraintTop_toBottomOf="@+id/scrollNombreCaña" />
+
+        <TextView
+            android:id="@+id/cañaEntrenamientoPrecio"
+            android:layout_width="58dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="52dp"
+            android:text="25"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@+id/cañaEntrenamientoTitulo"
+            app:layout_constraintTop_toBottomOf="@+id/scrollPrecioCaña" />
+
+        <ImageView
+            android:id="@+id/cañaEntrenamientoMoneda"
+            android:layout_width="29dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/coin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cañaEntrenamientoPrecio"
+            app:layout_constraintTop_toBottomOf="@+id/scrollPrecioCaña" />
+
+        <ImageView
+            android:id="@+id/cañaBambu"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/cana_bambu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cañaEntrenamiento" />
+
+        <TextView
+            android:id="@+id/cañaBambuTitulo"
+            android:layout_width="99dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="45dp"
+            android:text="Caña de bambú"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@+id/cañaBambu"
+            app:layout_constraintTop_toBottomOf="@+id/cañaEntrenamientoTitulo" />
+
+        <TextView
+            android:id="@+id/cañaBambuPrecio"
+            android:layout_width="58dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="70dp"
+            android:text="500"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@+id/cañaBambuTitulo"
+            app:layout_constraintTop_toBottomOf="@+id/cañaEntrenamientoPrecio" />
+
+        <ImageView
+            android:id="@+id/cañaBambuMoneda"
+            android:layout_width="29dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/coin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cañaBambuPrecio"
+            app:layout_constraintTop_toBottomOf="@+id/cañaEntrenamientoMoneda" />
+
+        <ImageView
+            android:id="@+id/cañaFibrioVidrio"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/cana_fibra_vidrio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cañaBambu" />
+
+        <TextView
+            android:id="@+id/cañaFibrioVidrioTitulo"
+            android:layout_width="99dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="45dp"
+            android:text="Caña de fibra de vidrio"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@+id/cañaFibrioVidrio"
+            app:layout_constraintTop_toBottomOf="@+id/cañaBambuTitulo" />
+
+        <TextView
+            android:id="@+id/cañaFibrioVidrioPrecio"
+            android:layout_width="58dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="70dp"
+            android:text="1800"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@+id/cañaFibrioVidrioTitulo"
+            app:layout_constraintTop_toBottomOf="@+id/cañaBambuPrecio" />
+
+        <ImageView
+            android:id="@+id/cañaFibrioVidrioMoneda"
+            android:layout_width="29dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/coin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cañaFibrioVidrioPrecio"
+            app:layout_constraintTop_toBottomOf="@+id/cañaBambuMoneda" />
+
+        <ImageView
+            android:id="@+id/cañaIridio"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/cana_iridio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cañaFibrioVidrio" />
+
+        <TextView
+            android:id="@+id/cañaIridioTitulo"
+            android:layout_width="103dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="55dp"
+            android:text="Caña de iridio"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@+id/cañaIridio"
+            app:layout_constraintTop_toBottomOf="@+id/cañaFibrioVidrioTitulo" />
+
+        <TextView
+            android:id="@+id/cañaIridioPrecio"
+            android:layout_width="58dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="70dp"
+            android:text="7500"
+            android:textAlignment="center"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@+id/cañaIridioTitulo"
+            app:layout_constraintTop_toBottomOf="@+id/cañaFibrioVidrioPrecio" />
+
+        <ImageView
+            android:id="@+id/cañaIridioMoneda"
+            android:layout_width="29dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="71dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/coin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cañaIridioPrecio"
+            app:layout_constraintTop_toBottomOf="@+id/cañaFibrioVidrioMoneda" />
+
+        <TextView
+            android:id="@+id/botonVolverCañaPescar"
+            style="@style/MyButtonStyle"
+            android:layout_width="141dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="105dp"
+            android:layout_marginBottom="10dp"
+            android:text="Volver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cañaIridio" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

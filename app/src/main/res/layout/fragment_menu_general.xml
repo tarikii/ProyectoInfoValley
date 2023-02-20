@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#40CFFF"
@@ -11,9 +18,10 @@
         android:id="@+id/menuGeneralBox"
         android:layout_width="214dp"
         android:layout_height="64dp"
-        android:src="@drawable/button_box_design"
-        app:layout_constraintBottom_toTopOf="@+id/guiaJuego"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/menu_box"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.561"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,104 +44,107 @@
         android:id="@+id/guiaJuego"
         android:layout_width="160dp"
         android:layout_height="91dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="112dp"
         android:background="@drawable/libro_guia"
-        app:layout_constraintBottom_toTopOf="@+id/guiasDelJuego"
         app:layout_constraintEnd_toStartOf="@+id/jugador"
-        app:layout_constraintHorizontal_bias="0.347"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuGeneralBox" />
 
     <TextView
         android:id="@+id/guiasDelJuego"
         android:layout_width="137dp"
         android:layout_height="28dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
         android:text="Guias del juego"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/mercadoOnline"
-        app:layout_constraintEnd_toStartOf="@+id/jugadorText"
-        app:layout_constraintHorizontal_bias="0.295"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guiaJuego"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/jugador"
         android:layout_width="154dp"
         android:layout_height="89dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="112dp"
         android:background="@drawable/jugador"
-        app:layout_constraintBottom_toTopOf="@+id/jugadorText"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="@+id/jugadorText"
+        app:layout_constraintTop_toBottomOf="@+id/menuGeneralBox" />
 
     <TextView
         android:id="@+id/jugadorText"
-        android:layout_width="124dp"
-        android:layout_height="37dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="48dp"
+        android:layout_width="137dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
         android:text="Jugador"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/preguntasForo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toEndOf="@+id/guiasDelJuego"
+        app:layout_constraintTop_toBottomOf="@+id/jugador"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/mercadoOnline"
-        android:layout_width="154dp"
-        android:layout_height="89dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="152dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="12dp"
         android:background="@drawable/mercado_online"
-        app:layout_constraintBottom_toTopOf="@+id/mercadoText"
         app:layout_constraintEnd_toStartOf="@+id/preguntasForo"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guiasDelJuego" />
 
     <TextView
         android:id="@+id/mercadoText"
         android:layout_width="122dp"
         android:layout_height="30dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
         android:text="Mercado Online"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/preguntasForoText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mercadoOnline" />
 
     <ImageButton
         android:id="@+id/preguntasForo"
         android:layout_width="158dp"
         android:layout_height="82dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="12dp"
         android:background="@drawable/preguntas_foro"
-        app:layout_constraintBottom_toTopOf="@+id/preguntasForoText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/mercadoText" />
+        app:layout_constraintTop_toBottomOf="@+id/jugadorText" />
 
     <TextView
         android:id="@+id/preguntasForoText"
         android:layout_width="148dp"
         android:layout_height="35dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginTop="28dp"
         android:text="Preguntas del foro"
         android:textColor="#000"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.676"
-        app:layout_constraintStart_toEndOf="@+id/mercadoText" />
+        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintStart_toEndOf="@+id/mercadoText"
+        app:layout_constraintTop_toBottomOf="@+id/preguntasForo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
