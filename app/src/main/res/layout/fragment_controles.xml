@@ -351,7 +351,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/teclasAtajoDescription" />
 
             <TextView
-                android:id="@+id/volverBotonControles"
+                android:id="@+id/botonVolverControles"
                 style="@style/MyButtonStyle"
                 android:layout_width="141dp"
                 android:layout_height="48dp"

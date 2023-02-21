@@ -1,14 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40CFFF"
     tools:context=".TiposGranja">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/solarionTiposGranja"
+        style="@style/MySolarionStyle"
+        android:layout_width="154dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:text="Tipos de granja"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+
+    <TextView
+        android:id="@+id/botonGranjaEstandar"
+        style="@style/MyButtonStyle"
+        android:layout_width="327dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="55dp"
+        android:text="Granja estandar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/solarionTiposGranja" />
+
+    <TextView
+        android:id="@+id/botonGranjaFluvial"
+        style="@style/MyButtonStyle"
+        android:layout_width="327dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="55dp"
+        android:text="Granja fluvial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonGranjaEstandar" />
+
+    <TextView
+        android:id="@+id/botonGranjaMinera"
+        style="@style/MyButtonStyle"
+        android:layout_width="327dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="55dp"
+        android:text="Granja minera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonGranjaFluvial" />
+
+    <TextView
+        android:id="@+id/botonGranjaPlaya"
+        style="@style/MyButtonStyle"
+        android:layout_width="327dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="75dp"
+        android:text="Granja de la playa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonGranjaMinera" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

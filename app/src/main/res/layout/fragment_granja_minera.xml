@@ -87,6 +87,7 @@
             app:layout_constraintTop_toBottomOf="@+id/habilidadAsociableMinera" />
 
         <TextView
+            android:id="@+id/botonVolverGranjaMinera"
             style="@style/MyButtonStyle"
             android:layout_width="141dp"
             android:layout_height="48dp"

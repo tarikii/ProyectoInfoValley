@@ -30,25 +30,181 @@
         style="@style/MyButtonStyle"
         android:layout_width="220dp"
         android:layout_height="54dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="25dp"
         android:text="Guia inicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/solarionOpcionesGenerales" />
 
 
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/menuDesplegableGuiaInicio"
+        android:layout_width="121dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="10dp"
+        app:el_duration="1000"
+        app:el_expanded="false"
+        app:el_parallax="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonGuiaInicio">
+
+
+        <TextView
+            android:id="@+id/botonTiposGranja"
+            style="@style/MyButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="0dp"
+            android:text="Tipos de granja"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/botonControles"
+            style="@style/MyButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="65dp"
+            android:text="Controles"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/botonPrimeraCosecha"
+            style="@style/MyButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="130dp"
+            android:text="Primera cosecha"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/botonEnergia"
+            style="@style/MyButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="195dp"
+            android:text="Energia"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/botonHabilidades"
+            style="@style/MyButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="260dp"
+            android:text="Habilidades"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/botonAldeanosAmistades"
+            style="@style/MyButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="325dp"
+            android:text="Aldeanos y amistades"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/botonTelevision"
+            style="@style/MyButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="390dp"
+            android:text="Television"
+            android:visibility="gone" />
+
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
     <TextView
         android:id="@+id/botonHerramientas"
         style="@style/MyButtonStyle"
         android:layout_width="220dp"
         android:layout_height="54dp"
-        android:layout_marginTop="150dp"
         android:layout_marginBottom="20dp"
         android:text="Herramientas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonGuiaInicio" />
+        app:layout_constraintTop_toBottomOf="@+id/menuDesplegableGuiaInicio"
+        app:layout_constraintVertical_bias="0.349" />
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/menuDesplegableHerramientas"
+        android:layout_width="121dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="10dp"
+        app:el_duration="1000"
+        app:el_expanded="false"
+        app:el_parallax="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonHerramientas">
+
+
+        <TextView
+            android:id="@+id/botonMejoras"
+            style="@style/MyButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="0dp"
+            android:text="Mejoras"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/botonEncantamientos"
+            style="@style/MyButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="65dp"
+            android:text="Encantamientos"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/botonAzadas"
+            style="@style/MyButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="130dp"
+            android:text="Azadas"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/botonPicos"
+            style="@style/MyButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="195dp"
+            android:text="Picos"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/botonHachas"
+            style="@style/MyButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="260dp"
+            android:text="Hachas"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/botonRegaderas"
+            style="@style/MyButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="325dp"
+            android:text="Regaderas"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/botonCañaPescar"
+            style="@style/MyButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="390dp"
+            android:text="Caña de pescar"
+            android:visibility="gone" />
+
+    </net.cachapa.expandablelayout.ExpandableLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

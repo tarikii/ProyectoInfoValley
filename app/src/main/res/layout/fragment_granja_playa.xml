@@ -183,7 +183,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/habilidadAsociablePlaya2" />
 
             <TextView
-                android:id="@+id/botonVolverPlaya"
+                android:id="@+id/botonVolverGranjaPlaya"
                 style="@style/MyButtonStyle"
                 android:layout_width="141dp"
                 android:layout_height="48dp"
