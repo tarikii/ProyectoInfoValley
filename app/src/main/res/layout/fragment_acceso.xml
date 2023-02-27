@@ -29,6 +29,7 @@
     <TextView
         android:id="@+id/infovalley"
         style="@style/MyScrollStyle"
+        android:layout_width="214dp"
         android:layout_height="48dp"
         android:layout_marginTop="52dp"
         android:text="InfoValley"

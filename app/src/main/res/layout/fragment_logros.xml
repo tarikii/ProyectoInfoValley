@@ -1,14 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#40CFFF"
     tools:context=".Logros">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/solarionLogros"
+        style="@style/MySolarionStyle"
+        android:layout_width="214dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="25dp"
+        android:text="Logros"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/logrosJugadorCuadro"
+        android:layout_width="363dp"
+        android:layout_height="338dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/logros_jugador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/solarionLogros" />
+
+    <ImageView
+        android:id="@+id/principianteLogros"
+        android:layout_width="73dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/principiante"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logrosJugadorCuadro" />
+
+    <ImageView
+        android:id="@+id/leyendaLogros"
+        android:layout_width="73dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/leyenda"
+        app:layout_constraintStart_toEndOf="@+id/principianteLogros"
+        app:layout_constraintTop_toTopOf="@+id/logrosJugadorCuadro" />
+
+    <ImageView
+        android:id="@+id/contactosLogros"
+        android:layout_width="73dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/contactos"
+        app:layout_constraintStart_toEndOf="@+id/leyendaLogros"
+        app:layout_constraintTop_toTopOf="@+id/logrosJugadorCuadro" />
+
+    <ImageView
+        android:id="@+id/viviendoGrandeLogros"
+        android:layout_width="73dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/viviendo_grande"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/contactosLogros"
+        app:layout_constraintTop_toTopOf="@+id/logrosJugadorCuadro" />
+
+    <ImageView
+        android:id="@+id/mejorandoLogros"
+        android:layout_width="73dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/mejorando"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/principianteLogros" />
+
+    <ImageView
+        android:id="@+id/pescadorExpertoLogros"
+        android:layout_width="73dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/pescador_experto"
+        app:layout_constraintStart_toEndOf="@+id/mejorandoLogros"
+        app:layout_constraintTop_toBottomOf="@+id/leyendaLogros" />
+
+    <ImageView
+        android:id="@+id/fondoLogros"
+        android:layout_width="73dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/fondo"
+        app:layout_constraintStart_toEndOf="@+id/pescadorExpertoLogros"
+        app:layout_constraintTop_toBottomOf="@+id/contactosLogros" />
+
+    <ImageView
+        android:id="@+id/leyendaLocalLogros"
+        android:layout_width="73dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/leyenda_local"
+        app:layout_constraintStart_toEndOf="@+id/fondoLogros"
+        app:layout_constraintTop_toBottomOf="@+id/viviendoGrandeLogros" />
+
+    <ImageView
+        android:id="@+id/madreCapturasLogros"
+        android:layout_width="73dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/madre_capturas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mejorandoLogros" />
+
+    <ImageView
+        android:id="@+id/maestroArtesanoLogros"
+        android:layout_width="73dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/maestro_artesano"
+        app:layout_constraintStart_toEndOf="@+id/madreCapturasLogros"
+        app:layout_constraintTop_toBottomOf="@+id/pescadorExpertoLogros" />
+
+    <ImageView
+        android:id="@+id/pescadorLogros"
+        android:layout_width="73dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/pescador"
+        app:layout_constraintStart_toEndOf="@+id/maestroArtesanoLogros"
+        app:layout_constraintTop_toBottomOf="@+id/fondoLogros" />
+
+    <TextView
+        android:id="@+id/botonVolverLogros"
+        style="@style/MyButtonStyle"
+        android:layout_width="141dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="15dp"
+        android:text="Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logrosJugadorCuadro" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -25,11 +25,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/tijerasEsquilarTijerasEsquilar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/tijeras_esquilar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageTijerasEsquilar" />
+
+        <TextView
+            android:id="@+id/tijerasEsquilarTexto"
+            android:layout_width="146dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="50dp"
+            android:text="Tijeras de Esquilar"
+            android:textColor="#000"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/TijerasEsquilarPrecio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tijerasEsquilarTijerasEsquilar" />
+
         <TextView
             android:id="@+id/TijerasEsquilarPrecio"
             android:layout_width="145dp"
             android:layout_height="74dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="55dp"
             android:layout_marginEnd="35dp"
             android:text="1000"
             android:textAlignment="center"
@@ -37,17 +60,17 @@
             android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatMessageTijerasEsquilar" />
+            app:layout_constraintTop_toBottomOf="@+id/tijerasEsquilarTijerasEsquilar" />
 
         <ImageView
             android:id="@+id/TijerasEsquilarMoneda"
             android:layout_width="78dp"
             android:layout_height="69dp"
-            android:layout_marginTop="203dp"
-            android:layout_marginEnd="70dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="60dp"
             android:background="@drawable/coin"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatMessageTijerasEsquilar" />
+            app:layout_constraintTop_toBottomOf="@+id/tijerasEsquilarTijerasEsquilar" />
 
         <TextView
             android:id="@+id/siBotonTijerasEsquilar"

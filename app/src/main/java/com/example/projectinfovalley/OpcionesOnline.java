@@ -11,12 +11,17 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.ablanco.zoomy.Zoomy;
 
 public class OpcionesOnline extends Fragment {
     NavController navController;
     TextView opcionVender;
     TextView opcionComprar;
+
+    ImageView zoomOpcionesOnline;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,6 +42,7 @@ public class OpcionesOnline extends Fragment {
         navController = Navigation.findNavController(view);
         opcionVender = view.findViewById(R.id.venderBoton);
         opcionComprar = view.findViewById(R.id.comprarBoton);
+        zoomOpcionesOnline = view.findViewById(R.id.miniaturaMercado);
 
         opcionVender.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,5 +57,8 @@ public class OpcionesOnline extends Fragment {
                 navController.navigate(R.id.action_opcionesOnline_to_comprar);
             }
         });
+
+        Zoomy.Builder builder = new Zoomy.Builder(getActivity()).target(zoomOpcionesOnline);
+        builder.register();
     }
 }

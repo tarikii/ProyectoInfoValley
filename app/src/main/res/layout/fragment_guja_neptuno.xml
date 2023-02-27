@@ -25,11 +25,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/gujaNeptunoGujaNeptuno"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/guja_neptuno"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageGujaNeptuno" />
+
+        <TextView
+            android:id="@+id/gujaNeptunoTexto"
+            android:layout_width="182dp"
+            android:layout_height="59dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="40dp"
+            android:text="Guja de Neptuno"
+            android:textColor="#000"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/GujaNeptunoPrecio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gujaNeptunoGujaNeptuno" />
+
         <TextView
             android:id="@+id/GujaNeptunoPrecio"
             android:layout_width="145dp"
             android:layout_height="74dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="55dp"
             android:layout_marginEnd="35dp"
             android:text="250"
             android:textAlignment="center"
@@ -37,17 +60,17 @@
             android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatMessageGujaNeptuno" />
+            app:layout_constraintTop_toBottomOf="@+id/gujaNeptunoGujaNeptuno" />
 
         <ImageView
             android:id="@+id/GujaNeptunoMoneda"
             android:layout_width="78dp"
             android:layout_height="69dp"
-            android:layout_marginTop="203dp"
-            android:layout_marginEnd="80dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="60dp"
             android:background="@drawable/coin"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatMessageGujaNeptuno" />
+            app:layout_constraintTop_toBottomOf="@+id/gujaNeptunoGujaNeptuno" />
 
         <TextView
             android:id="@+id/siBotonGujaNeptuno"

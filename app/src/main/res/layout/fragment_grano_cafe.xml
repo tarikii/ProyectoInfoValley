@@ -25,11 +25,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/granoCafeGranoCafe"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/grano_cafe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageGranoCafe" />
+
+        <TextView
+            android:id="@+id/granoCafeTexto"
+            android:layout_width="182dp"
+            android:layout_height="59dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="40dp"
+            android:text="Grano de Cafe"
+            android:textColor="#000"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/GranoCafePrecio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/granoCafeGranoCafe" />
+
         <TextView
             android:id="@+id/GranoCafePrecio"
             android:layout_width="145dp"
             android:layout_height="74dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="55dp"
             android:layout_marginEnd="35dp"
             android:text="2500"
             android:textAlignment="center"
@@ -37,17 +60,17 @@
             android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatMessageGranoCafe" />
+            app:layout_constraintTop_toBottomOf="@+id/granoCafeGranoCafe" />
 
         <ImageView
             android:id="@+id/GranoCafeMoneda"
             android:layout_width="78dp"
             android:layout_height="69dp"
-            android:layout_marginTop="203dp"
-            android:layout_marginEnd="65dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="60dp"
             android:background="@drawable/coin"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatMessageGranoCafe" />
+            app:layout_constraintTop_toBottomOf="@+id/granoCafeGranoCafe" />
 
         <TextView
             android:id="@+id/siBotonGranoCafe"

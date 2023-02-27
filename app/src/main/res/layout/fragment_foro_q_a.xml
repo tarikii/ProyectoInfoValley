@@ -60,10 +60,11 @@
 
             <TextView
                 android:id="@+id/xasthur777Consulta"
-                android:layout_width="140dp"
-                android:layout_height="24dp"
+                android:layout_width="148dp"
+                android:layout_height="52dp"
                 android:layout_marginEnd="150dp"
                 android:background="#FFF"
+                android:padding="8dp"
                 android:text="El juego tiene final?"
                 android:textColor="#000"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -99,10 +100,11 @@
 
             <TextView
                 android:id="@+id/respuestaAlixers12"
-                android:layout_width="154dp"
-                android:layout_height="95dp"
+                android:layout_width="165dp"
+                android:layout_height="117dp"
                 android:layout_marginEnd="90dp"
                 android:background="#FFF"
+                android:padding="8dp"
                 android:text="Stardew Valley no tiene un final oficial. Puedes seguir jugando todo el tiempo que quieras."
                 android:textColor="#000"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -129,6 +131,7 @@
                 android:layout_height="89dp"
                 android:layout_marginEnd="165dp"
                 android:background="#FFF"
+                android:padding="8dp"
                 android:text="¿Por qué decide tu personaje irse a vivir a la granja de su abuelo?"
                 android:textColor="#000"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -163,10 +166,11 @@
 
             <TextView
                 android:id="@+id/respuestaLeviathan51"
-                android:layout_width="159dp"
-                android:layout_height="113dp"
+                android:layout_width="168dp"
+                android:layout_height="174dp"
                 android:layout_marginEnd="90dp"
                 android:background="#FFF"
+                android:padding="8dp"
                 android:text="Porque su abuelo se lo recomienda, quiere una vida mas tranquila y esta cansado de estar tan estresado en su oficina."
                 android:textColor="#000"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -188,10 +192,11 @@
 
             <TextView
                 android:id="@+id/telepathic666Consulta"
-                android:layout_width="147dp"
-                android:layout_height="37dp"
+                android:layout_width="152dp"
+                android:layout_height="81dp"
                 android:layout_marginEnd="165dp"
                 android:background="#FFF"
+                android:padding="8dp"
                 android:text="¿Cuántos niveles tienen las minas?"
                 android:textColor="#000"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -226,10 +231,11 @@
 
             <TextView
                 android:id="@+id/respuestaCalamardo90"
-                android:layout_width="169dp"
-                android:layout_height="42dp"
+                android:layout_width="170dp"
+                android:layout_height="87dp"
                 android:layout_marginEnd="90dp"
                 android:background="#FFF"
+                android:padding="8dp"
                 android:text="Hay un total de 120 niveles en la mina."
                 android:textColor="#000"
                 app:layout_constraintEnd_toEndOf="parent"

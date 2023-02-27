@@ -1,5 +1,7 @@
 package com.example.projectinfovalley;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,7 +17,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Acceso extends Fragment {
-
     TextView login;
     TextView signup;
     NavController navController;

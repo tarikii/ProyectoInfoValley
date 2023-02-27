@@ -6,25 +6,20 @@
     app:startDestination="@id/acceso">
 
     <fragment
-        android:id="@+id/splashScreen"
-        android:name="com.example.projectinfovalley.SplashScreen"
-        android:label="fragment_splash_screen"
-        tools:layout="@layout/fragment_splash_screen" >
-        <action
-            android:id="@+id/action_splashScreen_to_acceso"
-            app:destination="@id/acceso" />
-    </fragment>
-    <fragment
         android:id="@+id/acceso"
         android:name="com.example.projectinfovalley.Acceso"
         android:label="fragment_acceso"
         tools:layout="@layout/fragment_acceso" >
         <action
             android:id="@+id/action_acceso_to_login"
-            app:destination="@id/login" />
+            app:destination="@id/login"
+            app:enterAnim="@anim/animate_slide_in_left"
+            app:exitAnim="@anim/animate_fade_exit" />
         <action
             android:id="@+id/action_acceso_to_signup"
-            app:destination="@id/signup" />
+            app:destination="@id/signup"
+            app:enterAnim="@anim/animate_slide_in_left"
+            app:exitAnim="@anim/animate_fade_exit" />
     </fragment>
     <fragment
         android:id="@+id/login"
@@ -33,7 +28,9 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_login_to_menuGeneral"
-            app:destination="@id/menuGeneral" />
+            app:destination="@id/menuGeneral"
+            app:enterAnim="@anim/animate_slide_in_left"
+            app:exitAnim="@anim/animate_fade_exit" />
     </fragment>
     <fragment
         android:id="@+id/signup"
@@ -42,7 +39,9 @@
         tools:layout="@layout/fragment_signup" >
         <action
             android:id="@+id/action_signup_to_menuGeneral"
-            app:destination="@id/menuGeneral" />
+            app:destination="@id/menuGeneral"
+            app:enterAnim="@anim/animate_slide_in_left"
+            app:exitAnim="@anim/animate_fade_exit" />
     </fragment>
     <fragment
         android:id="@+id/menuGeneral"
@@ -51,16 +50,24 @@
         tools:layout="@layout/fragment_menu_general" >
         <action
             android:id="@+id/action_menuGeneral_to_opcionesGenerales"
-            app:destination="@id/opcionesGenerales" />
+            app:destination="@id/opcionesGenerales"
+            app:enterAnim="@anim/animate_slide_in_left"
+            app:exitAnim="@anim/animate_fade_exit" />
         <action
             android:id="@+id/action_menuGeneral_to_menuJugador"
-            app:destination="@id/menuJugador" />
+            app:destination="@id/menuJugador"
+            app:enterAnim="@anim/animate_slide_in_left"
+            app:exitAnim="@anim/animate_fade_exit" />
         <action
             android:id="@+id/action_menuGeneral_to_opcionesOnline"
-            app:destination="@id/opcionesOnline" />
+            app:destination="@id/opcionesOnline"
+            app:enterAnim="@anim/animate_slide_in_left"
+            app:exitAnim="@anim/animate_fade_exit" />
         <action
             android:id="@+id/action_menuGeneral_to_foroQA"
-            app:destination="@id/foroQA" />
+            app:destination="@id/foroQA"
+            app:enterAnim="@anim/animate_slide_in_left"
+            app:exitAnim="@anim/animate_fade_exit" />
     </fragment>
     <fragment
         android:id="@+id/opcionesGenerales"
@@ -69,46 +76,74 @@
         tools:layout="@layout/fragment_opciones_generales" >
         <action
             android:id="@+id/action_opcionesGenerales_to_tiposGranja"
-            app:destination="@id/tiposGranja" />
+            app:destination="@id/tiposGranja"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_opcionesGenerales_to_controles"
-            app:destination="@id/controles" />
+            app:destination="@id/controles"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_opcionesGenerales_to_primeraCosecha"
-            app:destination="@id/primeraCosecha" />
+            app:destination="@id/primeraCosecha"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_opcionesGenerales_to_energia"
-            app:destination="@id/energia" />
+            app:destination="@id/energia"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_opcionesGenerales_to_habilidades"
-            app:destination="@id/habilidades" />
+            app:destination="@id/habilidades"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_opcionesGenerales_to_aldeanosAmistades"
-            app:destination="@id/aldeanosAmistades" />
+            app:destination="@id/aldeanosAmistades"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_opcionesGenerales_to_television"
-            app:destination="@id/television" />
+            app:destination="@id/television"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_opcionesGenerales_to_encantamientos"
-            app:destination="@id/encantamientos" />
+            app:destination="@id/encantamientos"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_opcionesGenerales_to_azadas"
-            app:destination="@id/azadas" />
+            app:destination="@id/azadas"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_opcionesGenerales_to_picos"
-            app:destination="@id/picos" />
+            app:destination="@id/picos"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_opcionesGenerales_to_hachas"
-            app:destination="@id/hachas" />
+            app:destination="@id/hachas"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_opcionesGenerales_to_regaderas"
-            app:destination="@id/regaderas" />
+            app:destination="@id/regaderas"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_opcionesGenerales_to_canaPescar"
-            app:destination="@id/canaPescar" />
+            app:destination="@id/canaPescar"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_opcionesGenerales_to_herramientas"
-            app:destination="@id/herramientas" />
+            app:destination="@id/herramientas"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/tiposGranja"
@@ -117,16 +152,24 @@
         tools:layout="@layout/fragment_tipos_granja" >
         <action
             android:id="@+id/action_tiposGranja_to_granjaEstandar"
-            app:destination="@id/granjaEstandar" />
+            app:destination="@id/granjaEstandar"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_tiposGranja_to_granjaFluvial"
-            app:destination="@id/granjaFluvial" />
+            app:destination="@id/granjaFluvial"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_tiposGranja_to_granjaMinera"
-            app:destination="@id/granjaMinera" />
+            app:destination="@id/granjaMinera"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
         <action
             android:id="@+id/action_tiposGranja_to_granjaPlaya"
-            app:destination="@id/granjaPlaya" />
+            app:destination="@id/granjaPlaya"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/granjaEstandar"
@@ -135,7 +178,9 @@
         tools:layout="@layout/fragment_granja_estandar" >
         <action
             android:id="@+id/action_granjaEstandar_to_tiposGranja"
-            app:destination="@id/tiposGranja" />
+            app:destination="@id/tiposGranja"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/granjaFluvial"
@@ -144,7 +189,9 @@
         tools:layout="@layout/fragment_granja_fluvial" >
         <action
             android:id="@+id/action_granjaFluvial_to_tiposGranja"
-            app:destination="@id/tiposGranja" />
+            app:destination="@id/tiposGranja"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/granjaMinera"
@@ -153,7 +200,9 @@
         tools:layout="@layout/fragment_granja_minera" >
         <action
             android:id="@+id/action_granjaMinera_to_tiposGranja"
-            app:destination="@id/tiposGranja" />
+            app:destination="@id/tiposGranja"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/granjaPlaya"
@@ -162,7 +211,9 @@
         tools:layout="@layout/fragment_granja_playa" >
         <action
             android:id="@+id/action_granjaPlaya_to_tiposGranja"
-            app:destination="@id/tiposGranja" />
+            app:destination="@id/tiposGranja"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/controles"
@@ -171,7 +222,9 @@
         tools:layout="@layout/fragment_controles" >
         <action
             android:id="@+id/action_controles_to_opcionesGenerales"
-            app:destination="@id/opcionesGenerales" />
+            app:destination="@id/opcionesGenerales"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/primeraCosecha"
@@ -180,7 +233,9 @@
         tools:layout="@layout/fragment_primera_cosecha" >
         <action
             android:id="@+id/action_primeraCosecha_to_opcionesGenerales"
-            app:destination="@id/opcionesGenerales" />
+            app:destination="@id/opcionesGenerales"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/energia"
@@ -189,7 +244,9 @@
         tools:layout="@layout/fragment_energia" >
         <action
             android:id="@+id/action_energia_to_opcionesGenerales"
-            app:destination="@id/opcionesGenerales" />
+            app:destination="@id/opcionesGenerales"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/habilidades"
@@ -198,7 +255,9 @@
         tools:layout="@layout/fragment_habilidades" >
         <action
             android:id="@+id/action_habilidades_to_opcionesGenerales"
-            app:destination="@id/opcionesGenerales" />
+            app:destination="@id/opcionesGenerales"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/aldeanosAmistades"
@@ -207,7 +266,9 @@
         tools:layout="@layout/fragment_aldeanos_amistades" >
         <action
             android:id="@+id/action_aldeanosAmistades_to_opcionesGenerales"
-            app:destination="@id/opcionesGenerales" />
+            app:destination="@id/opcionesGenerales"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/television"
@@ -216,7 +277,9 @@
         tools:layout="@layout/fragment_television" >
         <action
             android:id="@+id/action_television_to_opcionesGenerales"
-            app:destination="@id/opcionesGenerales" />
+            app:destination="@id/opcionesGenerales"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/herramientas"
@@ -225,7 +288,9 @@
         tools:layout="@layout/fragment_herramientas" >
         <action
             android:id="@+id/action_herramientas_to_opcionesGenerales"
-            app:destination="@id/opcionesGenerales" />
+            app:destination="@id/opcionesGenerales"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/encantamientos"
@@ -234,7 +299,9 @@
         tools:layout="@layout/fragment_encantamientos" >
         <action
             android:id="@+id/action_encantamientos_to_opcionesGenerales"
-            app:destination="@id/opcionesGenerales" />
+            app:destination="@id/opcionesGenerales"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/azadas"
@@ -243,7 +310,9 @@
         tools:layout="@layout/fragment_azadas" >
         <action
             android:id="@+id/action_azadas_to_opcionesGenerales"
-            app:destination="@id/opcionesGenerales" />
+            app:destination="@id/opcionesGenerales"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/picos"
@@ -252,7 +321,9 @@
         tools:layout="@layout/fragment_picos" >
         <action
             android:id="@+id/action_picos_to_opcionesGenerales"
-            app:destination="@id/opcionesGenerales" />
+            app:destination="@id/opcionesGenerales"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/hachas"
@@ -261,7 +332,9 @@
         tools:layout="@layout/fragment_hachas" >
         <action
             android:id="@+id/action_hachas_to_opcionesGenerales"
-            app:destination="@id/opcionesGenerales" />
+            app:destination="@id/opcionesGenerales"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/regaderas"
@@ -270,7 +343,9 @@
         tools:layout="@layout/fragment_regaderas" >
         <action
             android:id="@+id/action_regaderas_to_opcionesGenerales"
-            app:destination="@id/opcionesGenerales" />
+            app:destination="@id/opcionesGenerales"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/canaPescar"
@@ -279,7 +354,9 @@
         tools:layout="@layout/fragment_cana_pescar" >
         <action
             android:id="@+id/action_canaPescar_to_opcionesGenerales"
-            app:destination="@id/opcionesGenerales" />
+            app:destination="@id/opcionesGenerales"
+            app:enterAnim="@anim/animate_split_enter"
+            app:exitAnim="@anim/animate_split_exit" />
     </fragment>
     <fragment
         android:id="@+id/menuJugador"
@@ -288,13 +365,19 @@
         tools:layout="@layout/fragment_menu_jugador" >
         <action
             android:id="@+id/action_menuJugador_to_amigos"
-            app:destination="@id/amigos" />
+            app:destination="@id/amigos"
+            app:enterAnim="@anim/animate_shrink_enter"
+            app:exitAnim="@anim/animate_shrink_exit" />
         <action
             android:id="@+id/action_menuJugador_to_inventario"
-            app:destination="@id/inventario" />
+            app:destination="@id/inventario"
+            app:enterAnim="@anim/animate_shrink_enter"
+            app:exitAnim="@anim/animate_shrink_exit" />
         <action
             android:id="@+id/action_menuJugador_to_logros"
-            app:destination="@id/logros" />
+            app:destination="@id/logros"
+            app:enterAnim="@anim/animate_shrink_enter"
+            app:exitAnim="@anim/animate_shrink_exit" />
     </fragment>
     <fragment
         android:id="@+id/amigos"
@@ -303,18 +386,32 @@
         tools:layout="@layout/fragment_amigos" >
         <action
             android:id="@+id/action_amigos_to_menuJugador"
-            app:destination="@id/menuJugador" />
+            app:destination="@id/menuJugador"
+            app:enterAnim="@anim/animate_shrink_enter"
+            app:exitAnim="@anim/animate_shrink_exit" />
     </fragment>
     <fragment
         android:id="@+id/inventario"
         android:name="com.example.projectinfovalley.Inventario"
         android:label="fragment_inventario"
-        tools:layout="@layout/fragment_inventario" />
+        tools:layout="@layout/fragment_inventario" >
+        <action
+            android:id="@+id/action_inventario_to_menuJugador"
+            app:destination="@id/menuJugador"
+            app:enterAnim="@anim/animate_shrink_enter"
+            app:exitAnim="@anim/animate_shrink_exit" />
+    </fragment>
     <fragment
         android:id="@+id/logros"
         android:name="com.example.projectinfovalley.Logros"
         android:label="fragment_logros"
-        tools:layout="@layout/fragment_logros" />
+        tools:layout="@layout/fragment_logros" >
+        <action
+            android:id="@+id/action_logros_to_menuJugador"
+            app:destination="@id/menuJugador"
+            app:enterAnim="@anim/animate_shrink_enter"
+            app:exitAnim="@anim/animate_shrink_exit" />
+    </fragment>
     <fragment
         android:id="@+id/opcionesOnline"
         android:name="com.example.projectinfovalley.OpcionesOnline"
@@ -322,10 +419,14 @@
         tools:layout="@layout/fragment_opciones_online" >
         <action
             android:id="@+id/action_opcionesOnline_to_vender"
-            app:destination="@id/vender" />
+            app:destination="@id/vender"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_opcionesOnline_to_comprar"
-            app:destination="@id/comprar" />
+            app:destination="@id/comprar"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/vender"
@@ -334,31 +435,69 @@
         tools:layout="@layout/fragment_vender" >
         <action
             android:id="@+id/action_vender_to_semillasFresa"
-            app:destination="@id/semillasFresa" />
+            app:destination="@id/semillasFresa"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_vender_to_semillasChiviria"
-            app:destination="@id/semillasChiviria" />
+            app:destination="@id/semillasChiviria"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_vender_to_tridenteRoto"
-            app:destination="@id/tridenteRoto" />
+            app:destination="@id/tridenteRoto"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_vender_to_granoCafe"
-            app:destination="@id/granoCafe" />
+            app:destination="@id/granoCafe"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_vender_to_semillaCarambola"
-            app:destination="@id/semillaCarambola" />
+            app:destination="@id/semillaCarambola"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_vender_to_tijerasEsquilar"
-            app:destination="@id/tijerasEsquilar" />
+            app:destination="@id/tijerasEsquilar"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_vender_to_cuboBasuraOro"
-            app:destination="@id/cuboBasuraOro" />
+            app:destination="@id/cuboBasuraOro"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_vender_to_lucio"
-            app:destination="@id/lucio" />
+            app:destination="@id/lucio"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_vender_to_gujaNeptuno"
-            app:destination="@id/gujaNeptuno" />
+            app:destination="@id/gujaNeptuno"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_vender_to_opcionesOnline"
+            app:destination="@id/opcionesOnline"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_vender_to_calamarMedianoche"
+            app:destination="@id/calamarMedianoche"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_vender_to_esquirlaPrismatica"
+            app:destination="@id/esquirlaPrismatica"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_vender_to_hidrogelDeluxe"
+            app:destination="@id/hidrogelDeluxe"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/semillasFresa"
@@ -367,18 +506,42 @@
         tools:layout="@layout/fragment_semillas_fresa" >
         <action
             android:id="@+id/action_semillasFresa_to_puestoMercado"
-            app:destination="@id/puestoMercado" />
+            app:destination="@id/puestoMercado"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_semillasFresa_to_vender"
+            app:destination="@id/vender"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/semillasChiviria"
         android:name="com.example.projectinfovalley.SemillasChiviria"
         android:label="fragment_semillas_chiviria"
-        tools:layout="@layout/fragment_semillas_chiviria" />
+        tools:layout="@layout/fragment_semillas_chiviria" >
+        <action
+            android:id="@+id/action_semillasChiviria_to_vender"
+            app:destination="@id/vender"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_semillasChiviria_to_puestoMercado"
+            app:destination="@id/puestoMercado"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+    </fragment>
     <fragment
         android:id="@+id/puestoMercado"
         android:name="com.example.projectinfovalley.PuestoMercado"
         android:label="fragment_puesto_mercado"
-        tools:layout="@layout/fragment_puesto_mercado" />
+        tools:layout="@layout/fragment_puesto_mercado" >
+        <action
+            android:id="@+id/action_puestoMercado_to_opcionesOnline"
+            app:destination="@id/opcionesOnline"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+    </fragment>
     <fragment
         android:id="@+id/tridenteRoto"
         android:name="com.example.projectinfovalley.TridenteRoto"
@@ -386,7 +549,14 @@
         tools:layout="@layout/fragment_tridente_roto" >
         <action
             android:id="@+id/action_tridenteRoto_to_puestoMercado"
-            app:destination="@id/puestoMercado" />
+            app:destination="@id/puestoMercado"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_tridenteRoto_to_vender"
+            app:destination="@id/vender"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/granoCafe"
@@ -395,7 +565,14 @@
         tools:layout="@layout/fragment_grano_cafe" >
         <action
             android:id="@+id/action_granoCafe_to_puestoMercado"
-            app:destination="@id/puestoMercado" />
+            app:destination="@id/puestoMercado"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_granoCafe_to_vender"
+            app:destination="@id/vender"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/semillaCarambola"
@@ -404,7 +581,14 @@
         tools:layout="@layout/fragment_semilla_carambola" >
         <action
             android:id="@+id/action_semillaCarambola_to_puestoMercado"
-            app:destination="@id/puestoMercado" />
+            app:destination="@id/puestoMercado"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_semillaCarambola_to_vender"
+            app:destination="@id/vender"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/tijerasEsquilar"
@@ -413,7 +597,14 @@
         tools:layout="@layout/fragment_tijeras_esquilar" >
         <action
             android:id="@+id/action_tijerasEsquilar_to_puestoMercado"
-            app:destination="@id/puestoMercado" />
+            app:destination="@id/puestoMercado"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_tijerasEsquilar_to_vender"
+            app:destination="@id/vender"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/cuboBasuraOro"
@@ -422,7 +613,14 @@
         tools:layout="@layout/fragment_cubo_basura_oro" >
         <action
             android:id="@+id/action_cuboBasuraOro_to_puestoMercado"
-            app:destination="@id/puestoMercado" />
+            app:destination="@id/puestoMercado"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_cuboBasuraOro_to_vender"
+            app:destination="@id/vender"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/lucio"
@@ -431,7 +629,14 @@
         tools:layout="@layout/fragment_lucio" >
         <action
             android:id="@+id/action_lucio_to_puestoMercado"
-            app:destination="@id/puestoMercado" />
+            app:destination="@id/puestoMercado"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_lucio_to_vender"
+            app:destination="@id/vender"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/graciasCompra"
@@ -440,7 +645,9 @@
         tools:layout="@layout/fragment_gracias_compra" >
         <action
             android:id="@+id/action_graciasCompra_to_comprar"
-            app:destination="@id/comprar" />
+            app:destination="@id/comprar"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/gujaNeptuno"
@@ -449,7 +656,14 @@
         tools:layout="@layout/fragment_guja_neptuno" >
         <action
             android:id="@+id/action_gujaNeptuno_to_puestoMercado"
-            app:destination="@id/puestoMercado" />
+            app:destination="@id/puestoMercado"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_gujaNeptuno_to_vender"
+            app:destination="@id/vender"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/comprar"
@@ -458,37 +672,59 @@
         tools:layout="@layout/fragment_comprar" >
         <action
             android:id="@+id/action_comprar_to_calamarMedianoche"
-            app:destination="@id/calamarMedianoche" />
+            app:destination="@id/calamarMedianoche"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_comprar_to_esquirlaPrismatica"
-            app:destination="@id/esquirlaPrismatica" />
+            app:destination="@id/esquirlaPrismatica"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_comprar_to_incubadoraAvestruces"
-            app:destination="@id/incubadoraAvestruces" />
+            app:destination="@id/incubadoraAvestruces"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_comprar_to_hidrogelDeluxe"
-            app:destination="@id/hidrogelDeluxe" />
+            app:destination="@id/hidrogelDeluxe"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_comprar_to_baguette"
-            app:destination="@id/baguette" />
+            app:destination="@id/baguette"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_comprar_to_cerdo2"
-            app:destination="@id/cerdo2" />
+            app:destination="@id/cerdo2"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_comprar_to_mayonesaDinosaurio"
-            app:destination="@id/mayonesaDinosaurio" />
+            app:destination="@id/mayonesaDinosaurio"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_comprar_to_recolectorAutomatico"
-            app:destination="@id/recolectorAutomatico" />
+            app:destination="@id/recolectorAutomatico"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_comprar_to_radiador"
-            app:destination="@id/radiador" />
+            app:destination="@id/radiador"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_comprar_to_oveja"
-            app:destination="@id/oveja" />
+            app:destination="@id/oveja"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_comprar_to_opcionesOnline"
-            app:destination="@id/opcionesOnline" />
+            app:destination="@id/opcionesOnline"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/calamarMedianoche"
@@ -498,6 +734,16 @@
         <action
             android:id="@+id/action_calamarMedianoche_to_graciasCompra"
             app:destination="@id/graciasCompra" />
+        <action
+            android:id="@+id/action_calamarMedianoche_to_vender"
+            app:destination="@id/vender"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_calamarMedianoche_to_puestoMercado"
+            app:destination="@id/puestoMercado"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/esquirlaPrismatica"
@@ -507,6 +753,16 @@
         <action
             android:id="@+id/action_esquirlaPrismatica_to_graciasCompra"
             app:destination="@id/graciasCompra" />
+        <action
+            android:id="@+id/action_esquirlaPrismatica_to_vender"
+            app:destination="@id/vender"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_esquirlaPrismatica_to_puestoMercado"
+            app:destination="@id/puestoMercado"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/incubadoraAvestruces"
@@ -515,10 +771,14 @@
         tools:layout="@layout/fragment_incubadora_avestruces" >
         <action
             android:id="@+id/action_incubadoraAvestruces_to_graciasCompra"
-            app:destination="@id/graciasCompra" />
+            app:destination="@id/graciasCompra"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_incubadoraAvestruces_to_comprar"
-            app:destination="@id/comprar" />
+            app:destination="@id/comprar"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/hidrogelDeluxe"
@@ -527,7 +787,19 @@
         tools:layout="@layout/fragment_hidrogel_deluxe" >
         <action
             android:id="@+id/action_hidrogelDeluxe_to_graciasCompra"
-            app:destination="@id/graciasCompra" />
+            app:destination="@id/graciasCompra"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_hidrogelDeluxe_to_vender"
+            app:destination="@id/vender"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
+        <action
+            android:id="@+id/action_hidrogelDeluxe_to_puestoMercado"
+            app:destination="@id/puestoMercado"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/baguette"
@@ -536,10 +808,14 @@
         tools:layout="@layout/fragment_baguette" >
         <action
             android:id="@+id/action_baguette_to_graciasCompra"
-            app:destination="@id/graciasCompra" />
+            app:destination="@id/graciasCompra"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_baguette_to_comprar"
-            app:destination="@id/comprar" />
+            app:destination="@id/comprar"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/cerdo2"
@@ -548,10 +824,14 @@
         tools:layout="@layout/fragment_cerdo" >
         <action
             android:id="@+id/action_cerdo2_to_graciasCompra"
-            app:destination="@id/graciasCompra" />
+            app:destination="@id/graciasCompra"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_cerdo2_to_comprar"
-            app:destination="@id/comprar" />
+            app:destination="@id/comprar"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/mayonesaDinosaurio"
@@ -560,10 +840,14 @@
         tools:layout="@layout/fragment_mayonesa_dinosaurio" >
         <action
             android:id="@+id/action_mayonesaDinosaurio_to_graciasCompra"
-            app:destination="@id/graciasCompra" />
+            app:destination="@id/graciasCompra"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_mayonesaDinosaurio_to_comprar"
-            app:destination="@id/comprar" />
+            app:destination="@id/comprar"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/recolectorAutomatico"
@@ -572,10 +856,14 @@
         tools:layout="@layout/fragment_recolector_automatico" >
         <action
             android:id="@+id/action_recolectorAutomatico_to_graciasCompra"
-            app:destination="@id/graciasCompra" />
+            app:destination="@id/graciasCompra"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_recolectorAutomatico_to_comprar"
-            app:destination="@id/comprar" />
+            app:destination="@id/comprar"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/radiador"
@@ -584,10 +872,14 @@
         tools:layout="@layout/fragment_radiador" >
         <action
             android:id="@+id/action_radiador_to_graciasCompra"
-            app:destination="@id/graciasCompra" />
+            app:destination="@id/graciasCompra"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_radiador_to_comprar"
-            app:destination="@id/comprar" />
+            app:destination="@id/comprar"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/oveja"
@@ -596,10 +888,14 @@
         tools:layout="@layout/fragment_oveja" >
         <action
             android:id="@+id/action_oveja_to_graciasCompra"
-            app:destination="@id/graciasCompra" />
+            app:destination="@id/graciasCompra"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
         <action
             android:id="@+id/action_oveja_to_comprar"
-            app:destination="@id/comprar" />
+            app:destination="@id/comprar"
+            app:enterAnim="@anim/animate_spin_enter"
+            app:exitAnim="@anim/animate_spin_exit" />
     </fragment>
     <fragment
         android:id="@+id/foroQA"
@@ -608,13 +904,17 @@
         tools:layout="@layout/fragment_foro_q_a" >
         <action
             android:id="@+id/action_foroQA_to_consultarPregunta"
-            app:destination="@id/consultarPregunta" />
+            app:destination="@id/consultarPregunta"
+            app:enterAnim="@anim/animate_windmill_enter"
+            app:exitAnim="@anim/animate_windmill_exit" />
         <action
             android:id="@+id/action_foroQA_to_graciasConsulta"
             app:destination="@id/graciasConsulta" />
         <action
             android:id="@+id/action_foroQA_to_menuGeneral"
-            app:destination="@id/menuGeneral" />
+            app:destination="@id/menuGeneral"
+            app:enterAnim="@anim/animate_windmill_enter"
+            app:exitAnim="@anim/animate_windmill_exit" />
     </fragment>
     <fragment
         android:id="@+id/consultarPregunta"
@@ -623,10 +923,14 @@
         tools:layout="@layout/fragment_consultar_pregunta" >
         <action
             android:id="@+id/action_consultarPregunta_to_foroQA"
-            app:destination="@id/foroQA" />
+            app:destination="@id/foroQA"
+            app:enterAnim="@anim/animate_windmill_enter"
+            app:exitAnim="@anim/animate_windmill_exit" />
         <action
             android:id="@+id/action_consultarPregunta_to_graciasConsulta"
-            app:destination="@id/graciasConsulta" />
+            app:destination="@id/graciasConsulta"
+            app:enterAnim="@anim/animate_windmill_enter"
+            app:exitAnim="@anim/animate_windmill_exit" />
     </fragment>
     <fragment
         android:id="@+id/graciasConsulta"
@@ -635,9 +939,13 @@
         tools:layout="@layout/fragment_gracias_consulta" >
         <action
             android:id="@+id/action_graciasConsulta_to_consultarPregunta2"
-            app:destination="@id/consultarPregunta" />
+            app:destination="@id/consultarPregunta"
+            app:enterAnim="@anim/animate_windmill_enter"
+            app:exitAnim="@anim/animate_windmill_exit" />
         <action
             android:id="@+id/action_graciasConsulta_to_foroQA"
-            app:destination="@id/foroQA" />
+            app:destination="@id/foroQA"
+            app:enterAnim="@anim/animate_windmill_enter"
+            app:exitAnim="@anim/animate_windmill_exit" />
     </fragment>
 </navigation>

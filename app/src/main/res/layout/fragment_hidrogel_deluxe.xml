@@ -25,11 +25,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/hidrogelDeluxeHidrogelDeluxe"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/hidrogel_deluxe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageHidrogelDeluxe" />
+
+        <TextView
+            android:id="@+id/hidrogelDeluxeTexto"
+            android:layout_width="182dp"
+            android:layout_height="59dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="25dp"
+            android:text="Hidrogel Deluxe"
+            android:textColor="#000"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/HidrogelDeluxePrecio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/hidrogelDeluxeHidrogelDeluxe" />
+
         <TextView
             android:id="@+id/HidrogelDeluxePrecio"
             android:layout_width="145dp"
             android:layout_height="74dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="35dp"
             android:layout_marginEnd="35dp"
             android:text="150"
             android:textAlignment="center"
@@ -37,17 +60,17 @@
             android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatMessageHidrogelDeluxe" />
+            app:layout_constraintTop_toBottomOf="@+id/hidrogelDeluxeHidrogelDeluxe" />
 
         <ImageView
             android:id="@+id/HidrogelDeluxeMoneda"
             android:layout_width="78dp"
             android:layout_height="69dp"
-            android:layout_marginTop="203dp"
-            android:layout_marginEnd="80dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="60dp"
             android:background="@drawable/coin"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatMessageHidrogelDeluxe" />
+            app:layout_constraintTop_toBottomOf="@+id/hidrogelDeluxeHidrogelDeluxe" />
 
         <TextView
             android:id="@+id/siBotonHidrogelDeluxe"

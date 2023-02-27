@@ -1,27 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#40CFFF"
     tools:context=".Inventario">
 
+    <TextView
+        android:id="@+id/solarionInventario"
+        style="@style/MySolarionStyle"
+        android:layout_width="214dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="15dp"
+        android:text="Inventario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="360dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="125dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/solarionInventario">
 
-        <ImageView
-            android:id="@+id/inventarioInventario"
-            android:layout_width="781dp"
-            android:layout_height="150dp"
-            android:background="@drawable/inventario"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/inventarioInventario"
+                android:layout_width="781dp"
+                android:layout_height="150dp"
+                android:background="@drawable/inventario"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/semillasFresaInventario"
+                android:layout_width="62dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/semillas_fresa"
+                app:layout_constraintStart_toStartOf="@+id/inventarioInventario"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/semillasChiviriaInventario"
+                android:layout_width="62dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/semillas_chirivia"
+                app:layout_constraintStart_toStartOf="@+id/semillasFresaInventario"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/granoCafeInventario"
+                android:layout_width="62dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/grano_cafe"
+                app:layout_constraintStart_toStartOf="@+id/semillasChiviriaInventario"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/semillasCarambolaInventario"
+                android:layout_width="62dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/semillas_carambola"
+                app:layout_constraintStart_toStartOf="@+id/granoCafeInventario"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/gujaNeptunoInventario"
+                android:layout_width="62dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/guja_neptuno"
+                app:layout_constraintStart_toStartOf="@+id/semillasCarambolaInventario"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/tridenteRotoInventario"
+                android:layout_width="62dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/tridente_roto"
+                app:layout_constraintStart_toStartOf="@+id/gujaNeptunoInventario"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/tijerasEsquilarInventario"
+                android:layout_width="62dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/tijeras_esquilar"
+                app:layout_constraintStart_toStartOf="@+id/tridenteRotoInventario"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/cuboBasuraOroInventario"
+                android:layout_width="62dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/cubo_basura_oro"
+                app:layout_constraintStart_toStartOf="@+id/tijerasEsquilarInventario"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/lucioInventario"
+                android:layout_width="62dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="62dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/lucio"
+                app:layout_constraintStart_toStartOf="@+id/cuboBasuraOroInventario"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/calamarMedianocheInventario"
+                android:layout_width="62dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/calamar_medianoche"
+                app:layout_constraintStart_toStartOf="@+id/lucioInventario"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/esquirlaPrismaticaInventario"
+                android:layout_width="62dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="63dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/esquirla_prismatica"
+                app:layout_constraintStart_toStartOf="@+id/calamarMedianocheInventario"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/hidrogelDeluxeInventario"
+                android:layout_width="62dp"
+                android:layout_height="67dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/hidrogel_deluxe"
+                app:layout_constraintStart_toStartOf="@+id/esquirlaPrismaticaInventario"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </HorizontalScrollView>
 
+    <TextView
+        android:id="@+id/botonVolverInventario"
+        style="@style/MyButtonStyle"
+        android:layout_width="141dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginBottom="25dp"
+        android:text="Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

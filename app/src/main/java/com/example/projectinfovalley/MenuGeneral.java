@@ -12,13 +12,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MenuGeneral extends Fragment {
     NavController navController;
-    ImageView guiaJuego;
-    ImageView jugador;
-    ImageView mercadoOnline;
-    ImageView preguntasForo;
+    ImageView guiaJuegoImage;
+    ImageView jugadorImage;
+    ImageView mercadoOnlineImage;
+    ImageView preguntasForoImage;
+
+    TextView guiaJuegoText;
+    TextView jugadorText;
+    TextView mercadoOnlineText;
+    TextView preguntasForoText;
 
 
     @Override
@@ -39,34 +45,66 @@ public class MenuGeneral extends Fragment {
 
         navController = Navigation.findNavController(view);
 
-        guiaJuego = view.findViewById(R.id.guiaJuego);
-        jugador = view.findViewById(R.id.jugador);
-        mercadoOnline = view.findViewById(R.id.mercadoOnline);
-        preguntasForo = view.findViewById(R.id.preguntasForo);
+        guiaJuegoImage = view.findViewById(R.id.guiaJuego);
+        jugadorImage = view.findViewById(R.id.jugador);
+        mercadoOnlineImage = view.findViewById(R.id.mercadoOnline);
+        preguntasForoImage = view.findViewById(R.id.preguntasForo);
 
-        guiaJuego.setOnClickListener(new View.OnClickListener() {
+        guiaJuegoText = view.findViewById(R.id.guiasDelJuego);
+        jugadorText = view.findViewById(R.id.jugadorText);
+        mercadoOnlineText = view.findViewById(R.id.mercadoText);
+        preguntasForoText = view.findViewById(R.id.preguntasForoText);
+
+        guiaJuegoImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 navController.navigate(R.id.action_menuGeneral_to_opcionesGenerales);
             }
         });
 
-        jugador.setOnClickListener(new View.OnClickListener() {
+        guiaJuegoText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_menuGeneral_to_opcionesGenerales);
+            }
+        });
+
+        jugadorImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 navController.navigate(R.id.action_menuGeneral_to_menuJugador);
             }
         });
 
+        jugadorText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_menuGeneral_to_menuJugador);
+            }
+        });
 
-        mercadoOnline.setOnClickListener(new View.OnClickListener() {
+        mercadoOnlineImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 navController.navigate(R.id.action_menuGeneral_to_opcionesOnline);
             }
         });
 
-        preguntasForo.setOnClickListener(new View.OnClickListener() {
+        mercadoOnlineText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_menuGeneral_to_opcionesOnline);
+            }
+        });
+
+        preguntasForoImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_menuGeneral_to_foroQA);
+            }
+        });
+
+        preguntasForoText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 navController.navigate(R.id.action_menuGeneral_to_foroQA);

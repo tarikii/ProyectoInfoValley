@@ -1,10 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Vender">
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#40CFFF"
+        tools:context=".Vender">
 
+        <TextView
+            android:id="@+id/messageVender"
+            style="@style/MyMessageStyle"
+            android:layout_width="299dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="15dp"
+            android:text="Que te gustaria vender del inventario?"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="360dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="125dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/messageVender">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/inventarioVender"
+                    android:layout_width="781dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/inventario"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/semillasFresaVender"
+                    android:layout_width="62dp"
+                    android:layout_height="67dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/semillas_fresa"
+                    app:layout_constraintStart_toStartOf="@+id/inventarioVender"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/semillasChiviriaVender"
+                    android:layout_width="62dp"
+                    android:layout_height="67dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/semillas_chirivia"
+                    app:layout_constraintStart_toStartOf="@+id/semillasFresaVender"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/granoCafeVender"
+                    android:layout_width="62dp"
+                    android:layout_height="67dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/grano_cafe"
+                    app:layout_constraintStart_toStartOf="@+id/semillasChiviriaVender"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/semillasCarambolaVender"
+                    android:layout_width="62dp"
+                    android:layout_height="67dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/semillas_carambola"
+                    app:layout_constraintStart_toStartOf="@+id/granoCafeVender"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/gujaNeptunoVender"
+                    android:layout_width="62dp"
+                    android:layout_height="67dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/guja_neptuno"
+                    app:layout_constraintStart_toStartOf="@+id/semillasCarambolaVender"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/tridenteRotoVender"
+                    android:layout_width="62dp"
+                    android:layout_height="67dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/tridente_roto"
+                    app:layout_constraintStart_toStartOf="@+id/gujaNeptunoVender"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/tijerasEsquilarVender"
+                    android:layout_width="62dp"
+                    android:layout_height="67dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/tijeras_esquilar"
+                    app:layout_constraintStart_toStartOf="@+id/tridenteRotoVender"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/cuboBasuraOroVender"
+                    android:layout_width="62dp"
+                    android:layout_height="67dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/cubo_basura_oro"
+                    app:layout_constraintStart_toStartOf="@+id/tijerasEsquilarVender"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/lucioVender"
+                    android:layout_width="62dp"
+                    android:layout_height="67dp"
+                    android:layout_marginStart="62dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/lucio"
+                    app:layout_constraintStart_toStartOf="@+id/cuboBasuraOroVender"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/calamarMedianocheVender"
+                    android:layout_width="62dp"
+                    android:layout_height="67dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/calamar_medianoche"
+                    app:layout_constraintStart_toStartOf="@+id/lucioVender"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/esquirlaPrismaticaVender"
+                    android:layout_width="62dp"
+                    android:layout_height="67dp"
+                    android:layout_marginStart="63dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/esquirla_prismatica"
+                    app:layout_constraintStart_toStartOf="@+id/calamarMedianocheVender"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/hidrogelDeluxeVender"
+                    android:layout_width="62dp"
+                    android:layout_height="67dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/hidrogel_deluxe"
+                    app:layout_constraintStart_toStartOf="@+id/esquirlaPrismaticaVender"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/botonVolverVender"
+            style="@style/MyButtonStyle"
+            android:layout_width="141dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginBottom="25dp"
+            android:text="Volver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

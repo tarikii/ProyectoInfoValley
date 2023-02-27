@@ -25,11 +25,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/semillasChiviriaSemillasChiviria"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/semillas_chirivia"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageSemillasChiviria" />
+
+        <TextView
+            android:id="@+id/semillaChiviriaTexto"
+            android:layout_width="182dp"
+            android:layout_height="59dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="40dp"
+            android:text="Semillas de Chiviria"
+            android:textColor="#000"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/semillaChiviriaPrecio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/semillasChiviriaSemillasChiviria" />
+
         <TextView
             android:id="@+id/semillaChiviriaPrecio"
             android:layout_width="145dp"
             android:layout_height="74dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="55dp"
             android:layout_marginEnd="35dp"
             android:text="25"
             android:textAlignment="center"
@@ -37,17 +60,17 @@
             android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatMessageSemillasChiviria" />
+            app:layout_constraintTop_toBottomOf="@+id/semillasChiviriaSemillasChiviria" />
 
         <ImageView
             android:id="@+id/semillaChiviriaMoneda"
             android:layout_width="78dp"
             android:layout_height="69dp"
-            android:layout_marginTop="203dp"
-            android:layout_marginEnd="90dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="60dp"
             android:background="@drawable/coin"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatMessageSemillasChiviria" />
+            app:layout_constraintTop_toBottomOf="@+id/semillasChiviriaSemillasChiviria" />
 
         <TextView
             android:id="@+id/siBotonSemillaChiviria"

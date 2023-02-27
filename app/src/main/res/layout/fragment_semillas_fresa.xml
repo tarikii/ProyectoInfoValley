@@ -25,28 +25,52 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/semillasFresaSemillasFresa"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/semillas_fresa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatMessageSemillasFresa" />
+
+    <TextView
+        android:id="@+id/semillaFresaTexto"
+        android:layout_width="182dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="40dp"
+        android:text="Semillas de Fresa"
+        android:textColor="#000"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/semillaFresaPrecio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/semillasFresaSemillasFresa" />
+
     <TextView
         android:id="@+id/semillaFresaPrecio"
         android:layout_width="145dp"
         android:layout_height="74dp"
-        android:layout_marginTop="200dp"
         android:text="100"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="35dp"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chatMessageSemillasFresa" />
+        app:layout_constraintTop_toBottomOf="@+id/semillasFresaSemillasFresa" />
 
     <ImageView
         android:id="@+id/semillaFresaMoneda"
         android:layout_width="78dp"
         android:layout_height="69dp"
-        android:layout_marginTop="203dp"
-        android:layout_marginEnd="55dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="60dp"
         android:background="@drawable/coin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chatMessageSemillasFresa" />
+        app:layout_constraintTop_toBottomOf="@+id/semillasFresaSemillasFresa" />
 
     <TextView
         android:id="@+id/siBotonSemillaFresa"

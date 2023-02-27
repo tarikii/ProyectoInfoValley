@@ -25,11 +25,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/tridenteRotoTridenteRoto"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/tridente_roto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageTridenteRoto" />
+
+        <TextView
+            android:id="@+id/tridenteRotoTexto"
+            android:layout_width="182dp"
+            android:layout_height="59dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="40dp"
+            android:text="Tridente Roto"
+            android:textColor="#000"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/TridenteRotoPrecio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tridenteRotoTridenteRoto" />
+
         <TextView
             android:id="@+id/TridenteRotoPrecio"
             android:layout_width="145dp"
             android:layout_height="74dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="55dp"
             android:layout_marginEnd="35dp"
             android:text="250"
             android:textAlignment="center"
@@ -37,17 +60,17 @@
             android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatMessageTridenteRoto" />
+            app:layout_constraintTop_toBottomOf="@+id/tridenteRotoTridenteRoto" />
 
         <ImageView
             android:id="@+id/TridenteRotoMoneda"
             android:layout_width="78dp"
             android:layout_height="69dp"
-            android:layout_marginTop="203dp"
-            android:layout_marginEnd="80dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="60dp"
             android:background="@drawable/coin"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatMessageTridenteRoto" />
+            app:layout_constraintTop_toBottomOf="@+id/tridenteRotoTridenteRoto" />
 
         <TextView
             android:id="@+id/siBotonTridenteRoto"

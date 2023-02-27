@@ -25,11 +25,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/esquirlaPrismaticaEsquirlaPrismatica"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="75dp"
+            android:background="@drawable/esquirla_prismatica"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatMessageEsquirlaPrismatica" />
+
+        <TextView
+            android:id="@+id/esquirlaPrismaticaTexto"
+            android:layout_width="182dp"
+            android:layout_height="59dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="40dp"
+            android:text="Esquirla Prismatica"
+            android:textColor="#000"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/EsquirlaPrismaticaPrecio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/esquirlaPrismaticaEsquirlaPrismatica" />
+
         <TextView
             android:id="@+id/EsquirlaPrismaticaPrecio"
             android:layout_width="145dp"
             android:layout_height="74dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="55dp"
             android:layout_marginEnd="35dp"
             android:text="2000"
             android:textAlignment="center"
@@ -37,17 +60,17 @@
             android:textSize="50sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatMessageEsquirlaPrismatica" />
+            app:layout_constraintTop_toBottomOf="@+id/esquirlaPrismaticaEsquirlaPrismatica" />
 
         <ImageView
             android:id="@+id/EsquirlaPrismaticaMoneda"
             android:layout_width="78dp"
             android:layout_height="69dp"
-            android:layout_marginTop="203dp"
-            android:layout_marginEnd="80dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginEnd="60dp"
             android:background="@drawable/coin"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/chatMessageEsquirlaPrismatica" />
+            app:layout_constraintTop_toBottomOf="@+id/esquirlaPrismaticaEsquirlaPrismatica" />
 
         <TextView
             android:id="@+id/siBotonEsquirlaPrismatica"

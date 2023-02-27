@@ -11,11 +11,15 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.ablanco.zoomy.Zoomy;
 
 public class GranjaMinera extends Fragment {
     NavController navController;
     TextView botonVolver;
+    ImageView zoomGranjaMinera;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,7 @@ public class GranjaMinera extends Fragment {
 
         navController = Navigation.findNavController(view);
         botonVolver = view.findViewById(R.id.botonVolverGranjaMinera);
+        zoomGranjaMinera = view.findViewById(R.id.granjaMinera);
 
 
         botonVolver.setOnClickListener(new View.OnClickListener() {
@@ -43,5 +48,8 @@ public class GranjaMinera extends Fragment {
                 navController.navigate(R.id.action_granjaMinera_to_tiposGranja);
             }
         });
+
+        Zoomy.Builder builder = new Zoomy.Builder(getActivity()).target(zoomGranjaMinera);
+        builder.register();
     }
 }
